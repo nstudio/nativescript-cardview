@@ -1,0 +1,18 @@
+//default elements
+android {
+    productFlavors {
+        "nativescriptcardview" {
+            dimension "nativescriptcardview"
+        }
+    }
+}
+
+dependencies {
+      def suppotVer = "22.2.0";
+
+      if(project.hasProperty("supportVersion")) {
+       suppotVer = supportVersion
+      }
+
+	 compile "com.android.support:cardview-v7:$suppotVer"
+}
