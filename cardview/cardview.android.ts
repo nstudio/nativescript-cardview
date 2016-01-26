@@ -1,14 +1,10 @@
-﻿import common = require("./index-common");
+﻿import common = require("./cardview-common");
 import color = require("color");
 
 global.moduleMerge(common, exports);
 
 export class CardView extends common.CardView {
     private _android: android.support.v7.widget.CardView;
-
-    constructor() {
-        super();
-    }
 
     get android(): android.support.v7.widget.CardView {
         return this._android;

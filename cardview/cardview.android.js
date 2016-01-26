@@ -3,13 +3,13 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var common = require("./index-common");
+var common = require("./cardview-common");
 var color = require("color");
 global.moduleMerge(common, exports);
 var CardView = (function (_super) {
     __extends(CardView, _super);
     function CardView() {
-        _super.call(this);
+        _super.apply(this, arguments);
     }
     Object.defineProperty(CardView.prototype, "android", {
         get: function () {

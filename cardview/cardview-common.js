@@ -4,6 +4,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var layout_base_1 = require("ui/layouts/layout-base");
+var proxy = require("ui/core/proxy");
+var dependencyObservable = require("ui/core/dependency-observable");
 var CardView = (function (_super) {
     __extends(CardView, _super);
     function CardView() {
@@ -66,6 +68,11 @@ var CardView = (function (_super) {
         enumerable: true,
         configurable: true
     });
+    CardView.backgroundColorProperty = new dependencyObservable.Property("background", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
+    CardView.radiusProperty = new dependencyObservable.Property("radius", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
+    CardView.elevationProperty = new dependencyObservable.Property("elevation", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
+    CardView.contentPaddingProperty = new dependencyObservable.Property("contentPadding", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
+    CardView.paddingProperty = new dependencyObservable.Property("padding", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
     return CardView;
 })(layout_base_1.LayoutBase);
 exports.CardView = CardView;

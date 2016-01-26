@@ -1,12 +1,42 @@
 ﻿import definition = require("ui/cardview");
 import platform = require("platform");
 import {LayoutBase} from "ui/layouts/layout-base";
-import {View} from "ui/core/view";
 import {Orientation} from "ui/enums";
-import {PropertyMetadata} from "ui/core/proxy";
-import {Property, PropertyMetadataSettings} from "ui/core/dependency-observable";
+import proxy = require("ui/core/proxy");
+import dependencyObservable = require("ui/core/dependency-observable");
+import view = require("ui/core/view");
 
 export class CardView extends LayoutBase implements definition.CardView {
+
+    public static backgroundColorProperty = new dependencyObservable.Property(
+        "background",
+        "CardView",
+        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout)
+    );
+
+    public static radiusProperty = new dependencyObservable.Property(
+        "radius",
+        "CardView",
+        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout)
+    );
+
+    public static elevationProperty = new dependencyObservable.Property(
+        "elevation",
+        "CardView",
+        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout)
+    );
+
+    public static contentPaddingProperty = new dependencyObservable.Property(
+        "contentPadding",
+        "CardView",
+        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout)
+    );
+
+    public static paddingProperty = new dependencyObservable.Property(
+        "padding",
+        "CardView",
+        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout)
+    );
 
     get android(): android.support.v7.widget.CardView {
         return this._android;
