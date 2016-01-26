@@ -11,37 +11,37 @@ export class CardView extends LayoutBase implements definition.CardView {
     public static backgroundColorProperty = new dependencyObservable.Property(
         "background",
         "CardView",
-        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout)
+        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None)
     );
 
     public static radiusProperty = new dependencyObservable.Property(
         "radius",
         "CardView",
-        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout)
+        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None)
     );
 
     public static elevationProperty = new dependencyObservable.Property(
         "elevation",
         "CardView",
-        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout)
+        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None)
     );
 
     public static contentPaddingProperty = new dependencyObservable.Property(
         "contentPadding",
         "CardView",
-        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout)
+        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None)
     );
 
     public static paddingProperty = new dependencyObservable.Property(
         "padding",
         "CardView",
-        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout)
+        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None)
     );
 
     get android(): android.support.v7.widget.CardView {
         return this._android;
     }
-    
+
     get backgroundColor(): string {
         return this._getValue(CardView.backgroundColorProperty);
     }
@@ -54,7 +54,7 @@ export class CardView extends LayoutBase implements definition.CardView {
     }
     set radius(value: number) {
         this._setValue(CardView.radiusProperty, value);
-    }    
+    }
 
     get elevation(): number {
         return this._getValue(CardView.elevationProperty);

@@ -68,11 +68,11 @@ var CardView = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    CardView.backgroundColorProperty = new dependencyObservable.Property("background", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
-    CardView.radiusProperty = new dependencyObservable.Property("radius", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
-    CardView.elevationProperty = new dependencyObservable.Property("elevation", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
-    CardView.contentPaddingProperty = new dependencyObservable.Property("contentPadding", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
-    CardView.paddingProperty = new dependencyObservable.Property("padding", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
+    CardView.backgroundColorProperty = new dependencyObservable.Property("background", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None));
+    CardView.radiusProperty = new dependencyObservable.Property("radius", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None));
+    CardView.elevationProperty = new dependencyObservable.Property("elevation", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None));
+    CardView.contentPaddingProperty = new dependencyObservable.Property("contentPadding", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None));
+    CardView.paddingProperty = new dependencyObservable.Property("padding", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None));
     return CardView;
 })(layout_base_1.LayoutBase);
 exports.CardView = CardView;
