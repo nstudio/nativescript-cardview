@@ -24,7 +24,7 @@ export class CardView extends common.CardView {
             this._android.setCardElevation(this.elevation);
 
         if (this.contentPadding)
-            this._android.setContentPadding(this.contentPadding);
+            this._android.setContentPadding(this.contentPadding, this.padding, this.padding, this.padding);
 
         if (this.padding)
             this._android.setPadding(this.padding, this.padding, this.padding, this.padding);
