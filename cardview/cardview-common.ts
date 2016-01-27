@@ -1,4 +1,4 @@
-﻿import definition = require("ui/cardview");
+﻿import definition = require("cardview");
 import platform = require("platform");
 import {LayoutBase} from "ui/layouts/layout-base";
 import {Orientation} from "ui/enums";
