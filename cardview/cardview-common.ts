@@ -6,37 +6,43 @@ import proxy = require("ui/core/proxy");
 import dependencyObservable = require("ui/core/dependency-observable");
 import view = require("ui/core/view");
 
-export class CardView extends LayoutBase implements definition.CardView {
+ var backgroundColorProperty = new dependencyObservable.Property(
+    "background",
+    "CardView",
+    new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout)
+);
 
-    public static backgroundColorProperty = new dependencyObservable.Property(
-        "background",
-        "CardView",
-        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None)
-    );
-
-    public static radiusProperty = new dependencyObservable.Property(
+ var radiusProperty = new dependencyObservable.Property(
         "radius",
         "CardView",
-        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None)
+        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout)
     );
 
-    public static elevationProperty = new dependencyObservable.Property(
+ var elevationProperty = new dependencyObservable.Property(
         "elevation",
         "CardView",
-        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None)
-    );
+        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout)
+ );
 
-    public static contentPaddingProperty = new dependencyObservable.Property(
+  var contentPaddingProperty = new dependencyObservable.Property(
         "contentPadding",
         "CardView",
-        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None)
-    );
+        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout)
+ );
 
-    public static paddingProperty = new dependencyObservable.Property(
+    var paddingProperty = new dependencyObservable.Property(
         "padding",
         "CardView",
-        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None)
+        new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout)
     );
+
+export class CardView extends LayoutBase implements definition.CardView {
+
+    public static backgroundColorProperty = backgroundColorProperty;
+    public static radiusProperty = radiusProperty;
+    public static elevationProperty = elevationProperty;
+    public static contentPaddingProperty = contentPaddingProperty;
+    public static paddingProperty = contentPaddingProperty;
 
     get android(): android.support.v7.widget.CardView {
         return this._android;

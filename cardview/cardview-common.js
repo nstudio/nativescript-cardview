@@ -6,6 +6,11 @@ var __extends = (this && this.__extends) || function (d, b) {
 var layout_base_1 = require("ui/layouts/layout-base");
 var proxy = require("ui/core/proxy");
 var dependencyObservable = require("ui/core/dependency-observable");
+var backgroundColorProperty = new dependencyObservable.Property("background", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
+var radiusProperty = new dependencyObservable.Property("radius", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
+var elevationProperty = new dependencyObservable.Property("elevation", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
+var contentPaddingProperty = new dependencyObservable.Property("contentPadding", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
+var paddingProperty = new dependencyObservable.Property("padding", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
 var CardView = (function (_super) {
     __extends(CardView, _super);
     function CardView() {
@@ -68,11 +73,11 @@ var CardView = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    CardView.backgroundColorProperty = new dependencyObservable.Property("background", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None));
-    CardView.radiusProperty = new dependencyObservable.Property("radius", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None));
-    CardView.elevationProperty = new dependencyObservable.Property("elevation", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None));
-    CardView.contentPaddingProperty = new dependencyObservable.Property("contentPadding", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None));
-    CardView.paddingProperty = new dependencyObservable.Property("padding", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.None));
+    CardView.backgroundColorProperty = backgroundColorProperty;
+    CardView.radiusProperty = radiusProperty;
+    CardView.elevationProperty = elevationProperty;
+    CardView.contentPaddingProperty = contentPaddingProperty;
+    CardView.paddingProperty = contentPaddingProperty;
     return CardView;
 })(layout_base_1.LayoutBase);
 exports.CardView = CardView;
