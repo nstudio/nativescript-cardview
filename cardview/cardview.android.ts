@@ -19,6 +19,6 @@ export class CardView extends common.CardView {
 
         if (this.elevation)
             this._android.setCardElevation(this.elevation);
-            
+  
     }
 }
