@@ -3,14 +3,11 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var layout_base_1 = require("ui/layouts/layout-base");
 var proxy = require("ui/core/proxy");
 var dependencyObservable = require("ui/core/dependency-observable");
-var backgroundColorProperty = new dependencyObservable.Property("background", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
+var view = require("ui/core/view");
 var radiusProperty = new dependencyObservable.Property("radius", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
 var elevationProperty = new dependencyObservable.Property("elevation", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
-var contentPaddingProperty = new dependencyObservable.Property("contentPadding", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
-var paddingProperty = new dependencyObservable.Property("padding", "CardView", new proxy.PropertyMetadata("", dependencyObservable.PropertyMetadataSettings.AffectsLayout));
 var CardView = (function (_super) {
     __extends(CardView, _super);
     function CardView() {
@@ -19,16 +16,6 @@ var CardView = (function (_super) {
     Object.defineProperty(CardView.prototype, "android", {
         get: function () {
             return this._android;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(CardView.prototype, "backgroundColor", {
-        get: function () {
-            return this._getValue(CardView.backgroundColorProperty);
-        },
-        set: function (value) {
-            this._setValue(CardView.backgroundColorProperty, value);
         },
         enumerable: true,
         configurable: true
@@ -53,31 +40,12 @@ var CardView = (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(CardView.prototype, "contentPadding", {
-        get: function () {
-            return this._getValue(CardView.contentPaddingProperty);
-        },
-        set: function (value) {
-            this._setValue(CardView.contentPaddingProperty, value);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(CardView.prototype, "padding", {
-        get: function () {
-            return this._getValue(CardView.paddingProperty);
-        },
-        set: function (value) {
-            this._setValue(CardView.paddingProperty, value);
-        },
-        enumerable: true,
-        configurable: true
-    });
-    CardView.backgroundColorProperty = backgroundColorProperty;
+    CardView.prototype._addChildFromBuilder = function (name, value) {
+        console.log('name = ' + name + " value = " + value);
+        //formattedString.FormattedString.addFormattedStringToView(this, name, value);
+    };
     CardView.radiusProperty = radiusProperty;
     CardView.elevationProperty = elevationProperty;
-    CardView.contentPaddingProperty = contentPaddingProperty;
-    CardView.paddingProperty = contentPaddingProperty;
     return CardView;
-})(layout_base_1.LayoutBase);
+})(view.View);
 exports.CardView = CardView;
