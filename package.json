@@ -22,6 +22,7 @@
     "bradmartin",
     "Thorum"
   ],
+  "contributors": [{"name": "Nathanael Anderson", "email": "nathan@master-technology", "url": "https://github.com/nathanaela"}],
   "author": "Brad Martin <bradmartin0905@gmail.com> (https://github.com/bradmartin)",
   "license": "Apache-2.0",
   "bugs": "https://github.com/bradmartin/nativescript-cardview/issues",

@@ -1,7 +1,7 @@
 ﻿import definition = require("cardview");
 import platform = require("platform");
 import {LayoutBase} from "ui/layouts/layout-base";
-import view = require("ui/core/view");
+import contentView = require("ui/content-view");
 import {Orientation} from "ui/enums";
 import {PropertyMetadata} from "ui/core/proxy";
 import {Property, PropertyMetadataSettings} from "ui/core/dependency-observable"; 
@@ -21,17 +21,13 @@ import {Property, PropertyMetadataSettings} from "ui/core/dependency-observable"
  );
 
 
-export class CardView extends view.View implements definition.CardView {
+export class CardView extends contentView.ContentView implements definition.CardView {
 
     public static radiusProperty = radiusProperty;
     public static elevationProperty = elevationProperty;
 
     constructor() {
         super();
-    }
-
-    get android(): android.support.v7.widget.CardView {
-        return this.android;
     }
 
     get radius(): number {
@@ -48,12 +44,5 @@ export class CardView extends view.View implements definition.CardView {
         this._setValue(CardView.elevationProperty, value);
     }
 
-    public _addChildFromBuilder(name: string, value: any): void {
-        console.log('name: ' + name + ' value: ' + value);
-        //if (value instanceof LayoutBase) {
-        //this._addView(value);
-        this.android.addView(value.android);
-        //}
-    }
 
 }
