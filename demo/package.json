@@ -1,0 +1,11 @@
+{
+  "nativescript": {
+    "id": "org.nativescript.cardview",
+    "tns-android": {
+      "version": "1.5.1"
+    }
+  },
+  "dependencies": {
+    "tns-core-modules": "1.5.1"
+  }
+}

@@ -1,0 +1,107 @@
+<page xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:Card="nativescript-cardview"
+      loaded="pageLoaded">
+
+    <page.actionBar>
+        <action-bar title="CardView" backgroundColor="#009688" color="#f1f1f1" android.icon="res://ic_test"/>
+    </page.actionBar>
+
+    <scroll-view>
+        
+        <stack-layout> 
+             
+            <Card:CardView margin="10" id="batCard">
+                <grid-layout rows="200, auto, auto" columns="auto, auto, *">
+                    <image src="~/images/batman.jpg" stretch="aspectFill" colSpan="3" row="0" />
+                    <label text="Batman wants to be friends?" class="info" textWrap="true" row="1" colSpan="3" />          
+                    <button text="DECLINE" tap="goAway" class="clear-btn blue" row="2" col="0" />
+                    <button text="ACCEPT" class="clear-btn blue" row="2" col="1" />
+                </grid-layout>
+            </Card:CardView>
+
+            <grid-layout rows="*" columns="*, *">
+
+                <Card:CardView margin="10" col="0" elevation="20">
+                    <grid-layout rows="120, auto" columns="*, *, *">
+                        <image src="~/images/mountain.jpg" stretch="aspectFill" colSpan="3" row="0" />
+                        <button text="&#xE55F;" class="Material info clear-btn gray" row="1" col="0" />                        
+                        <button text="&#xE559;" class="Material info clear-btn gray" row="1" col="1" />
+                        <button text="&#xE80D;" class="Material info clear-btn gray" row="1" col="2" />
+                    </grid-layout>
+                </Card:CardView>
+
+                <Card:CardView margin="10" col="1" elevation="20">
+                    <grid-layout rows="120, auto" columns="*, *, *">
+                        <image src="~/images/plane.jpg" stretch="aspectFill" colSpan="3" row="0" />
+                        <button text="&#xE55F;" class="Material info clear-btn gray" row="1" col="0" />
+                        <button text="&#xE559;" class="Material info clear-btn gray" row="1" col="1" />
+                        <button text="&#xE80D;" class="Material info clear-btn gray" row="1" col="2" />
+                    </grid-layout>
+                </Card:CardView>
+                
+            </grid-layout>
+            
+
+            <Card:CardView margin="10" id="jokerCard" radius="50" elevation="50">
+                <grid-layout rows="200, auto, auto" columns="auto, auto, *">
+                    <image src="~/images/joker.jpg" stretch="aspectFill" colSpan="3" row="0" />
+                    <label text="Joker wants to talk?" class="info" textWrap="true" row="1" colSpan="3" />          
+                    <button text="DECLINE" tap="goAwayJoker" class="clear-btn blue" row="2" col="0" />
+                    <button text="ACCEPT" class="clear-btn blue" row="2" col="1" />
+                </grid-layout>
+            </Card:CardView>      
+            
+            <grid-layout rows="*" columns="*, *">
+            
+                <Card:CardView col="0" margin="10" backgroundColor="#00BCD4">
+                    <grid-layout rows="auto, auto" columns="auto">
+                     <label text="Budget" textWrap="true" class="size16 white" row="0" />
+                     <label text="123.4M" textWrap="true" class="title white" row="1" />
+                    </grid-layout>
+                </Card:CardView>                
+                
+                <Card:CardView col="1" margin="10" elevation="25">
+                    <grid-layout rows="auto, auto" columns="auto">
+                     <label text="Sales" textWrap="true" class="size16" row="0" />
+                     <label text="345.8M" textWrap="true" class="title" row="1" />
+                    </grid-layout>
+                </Card:CardView>
+               
+            </grid-layout>  
+            
+             <Card:CardView margin="5" id="facebookCard" radius="10" elevation="15">
+                <grid-layout rows="auto, auto, 250, auto" columns="60, auto, *">
+                    <label text="B" class="avatar-circle" row="0" col="0" />
+                    <label text="Brad Martin" textWrap="true" margin="10" class="size16 align-center" row="0" col="1" />
+                    <label text="I like long walks on the beach and candlelit dinners..." textWrap="true" margin="10" class="size16" row="1" colSpan="3" />
+                    <image src="~/images/vegas.jpg" stretch="aspectFill" row="2" colSpan="3" />
+     
+                    <grid-layout row="3" colSpan="3" rows="auto" columns="auto, auto, auto">
+                     <button text="&#xE80D;" class="Material info clear-btn gray" col="0" />
+                     <button text="&#xE0B9;" class="Material info clear-btn gray" col="1" />
+                     <button text="&#xE87D;" class="Material info clear-btn gray" col="2" />
+                    </grid-layout>                    
+                </grid-layout>
+            </Card:CardView>
+            
+            
+             <Card:CardView margin="5" id="facebookCard" radius="10" elevation="15">
+                <grid-layout rows="auto, auto, 250, auto" columns="60, auto, *">
+                    <label text="N" class="avatar-circle" row="0" col="0" />
+                    <label text="Nathanael Anderson" textWrap="true" margin="10" class="size16 align-center" row="0" col="1" />
+                    <label text="If you know what load &#8220;*&#8221;,8,1 is; you might have a clue as to how long I've been programming." textWrap="true" margin="10" class="size16" row="1" colSpan="3" />
+                    <image src="~/images/nathanael.jpg" stretch="aspectFill" row="2" colSpan="3" />
+     
+                    <grid-layout row="3" colSpan="3" rows="auto" columns="auto, auto, auto">
+                     <button text="&#xE80D;" class="Material info clear-btn gray" col="0" />
+                     <button text="&#xE0B9;" class="Material info clear-btn gray" col="1" />
+                     <button text="&#xE87D;" class="Material info clear-btn gray" col="2" />
+                    </grid-layout>                    
+                </grid-layout>
+            </Card:CardView>
+                        
+        </stack-layout>
+        
+    </scroll-view>
+
+</page>
