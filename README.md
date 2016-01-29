@@ -1,6 +1,6 @@
 ﻿# NativeScript CardView :credit_card:
 
-A NativeScript plugin for Android Material Design CardView component. This is currently Android only. If someone wants to contribute the iOS version, I've found a cocoapod that would be perfect. https://cocoapods.org/pods/MaterialCardView [MaterialCardView](https://cocoapods.org/pods/MaterialCardView)
+A NativeScript plugin for Android Material Design CardView component. This is currently Android only. If someone wants to contribute the iOS version, I've found a cocoapod that would be perfect. https://cocoapods.org/pods/MaterialCardView
 
 #### [Material Design Spec](https://www.google.com/design/spec/components/cards.html)
 #### [CardView Android Documentation](http://developer.android.com/intl/zh-tw/reference/android/support/v7/widget/CardView.html) 
