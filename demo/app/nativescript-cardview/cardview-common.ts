@@ -1,22 +1,20 @@
 ﻿import definition = require("cardview");
-import platform = require("platform");
-import {LayoutBase} from "ui/layouts/layout-base";
 import contentView = require("ui/content-view");
-import {Orientation} from "ui/enums";
 import {PropertyMetadata} from "ui/core/proxy";
 import {Property, PropertyMetadataSettings} from "ui/core/dependency-observable";
 
-var radiusProperty = new Property(
+ var radiusProperty = new Property(
         "radius",
         "CardView",
         new PropertyMetadata(undefined, PropertyMetadataSettings.None)
     );
 
-var elevationProperty = new Property(
+ var elevationProperty = new Property(
         "elevation",
         "CardView",
         new PropertyMetadata(undefined, PropertyMetadataSettings.None)
  );
+
 
 export class CardView extends contentView.ContentView implements definition.CardView {
 
@@ -40,5 +38,6 @@ export class CardView extends contentView.ContentView implements definition.Card
     set elevation(value: number) {
         this._setValue(CardView.elevationProperty, value);
     }
+
 
 }

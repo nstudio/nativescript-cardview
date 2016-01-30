@@ -1,5 +1,4 @@
 ﻿import common = require("./cardview-common");
-import color = require("color");
  
 global.moduleMerge(common, exports);
 
