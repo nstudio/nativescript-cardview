@@ -2,8 +2,6 @@
  * Contains the CardView class, which represents a FrameLayout with a rounded corner background and shadow.
  */
 declare module "cardview" {
-    import dependencyObservable = require("ui/core/dependency-observable");
-    import {LayoutBase} from "ui/layouts/layout-base";
     import view = require("ui/core/view");
      
     /**
