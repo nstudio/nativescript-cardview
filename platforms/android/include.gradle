@@ -8,11 +8,11 @@ android {
 }
 
 dependencies {
-      def suppotVer = "22.2.0";
+      def supportVer = "22.2.0";
 
       if(project.hasProperty("supportVersion")) {
-       suppotVer = supportVersion
+       supportVer = supportVersion
       }
 
-	 compile "com.android.support:cardview-v7:$suppotVer"
+	 compile "com.android.support:cardview-v7:$supportVer"
 }
