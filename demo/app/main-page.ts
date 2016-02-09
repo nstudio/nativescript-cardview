@@ -1,6 +1,5 @@
 ﻿import observable = require("data/observable");
 import pages = require("ui/page");
-import card = require("./cardview/cardview");
 import btnModule = require("ui/button");
 import frame = require("ui/frame");
 import app = require("application");
@@ -42,7 +41,7 @@ export function goAwayJoker(args) {
 
 export function cardLoaded(args: observable.EventData) {
     try {
-        var card = <card.CardView>args.object;
+        var card = args.object;
         console.log('card = ' + card);
         //console.log('card id = ' + card.id);
         if (app.android) {
