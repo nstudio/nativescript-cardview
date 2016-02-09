@@ -53,6 +53,11 @@ Sample 3 | Sample 4
 -------- | -------
 ![Sample3](sample_card3.png) | ![Sample4](sample_card4.png)
 
+#### Contributing
+
+[Please follow here](https://github.com/bradmartin/nativescript-cardview/blob/master/CONTRIBUTING.md)
+
 
 #### Contributors
 [NathanaelA](https://github.com/NathanaelA)
+[NathanWalker](https://github.com/NathanWalker)
