@@ -42,8 +42,13 @@ This uses the internal backgroundColor stying provided by NativeScript, but I wa
 you will lose any elevation and radius property set. This could be enhanced in the future to override the NativeScript styling
 to use the native method available on the CardView component.
 
+#### Contributing
+
+[Please follow here](https://github.com/bradmartin/nativescript-cardview/blob/master/CONTRIBUTING.md)
 
 ## Sample Screenshots
+
+### Android
 
 Sample 1 |  Sample 2
 -------- | ---------
@@ -53,11 +58,17 @@ Sample 3 | Sample 4
 -------- | -------
 ![Sample3](sample_card3.png) | ![Sample4](sample_card4.png)
 
-#### Contributing
+### iOS
 
-[Please follow here](https://github.com/bradmartin/nativescript-cardview/blob/master/CONTRIBUTING.md)
+Sample 1 |  Sample 2
+-------- | ---------
+![Sample1](sample_card1_ios.png) | ![Sample2](sample_card2_ios.png)
 
+Sample 3 | Sample 4
+-------- | -------
+![Sample3](sample_card3_ios.png) | ![Sample4](sample_card4_ios.png)
 
 #### Contributors
 [NathanaelA](https://github.com/NathanaelA)
+
 [NathanWalker](https://github.com/NathanWalker)
