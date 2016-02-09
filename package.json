@@ -5,8 +5,12 @@
   "main": "cardview.js",
   "nativescript": {
     "platforms": {
-      "android": "1.5.0"
+      "android": "1.5.0",
+      "ios": "1.5.2"
     }
+  },
+  "scripts": {
+    "build": "tsc cardview-common.ts cardview.android.ts cardview.ios.ts"
   },
   "repository": {
     "type": "git",
@@ -28,6 +32,11 @@
       "name": "Nathanael Anderson",
       "email": "nathan@master-technology",
       "url": "https://github.com/nathanaela"
+    },
+    {
+      "name": "Nathanael Walker",
+      "email": "nathan.walker@infowrap.com",
+      "url": "https://github.com/NathanWalker"
     }
   ],
   "author": "Brad Martin <bradwaynemartin@gmail.com> (https://github.com/bradmartin)",

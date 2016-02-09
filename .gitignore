@@ -199,3 +199,10 @@ FakesAssemblies/
 .vs
 .vs/
 nativescript-fab.sln
+
+*.js
+demo/platforms
+demo/hooks
+demo/app/*.js
+demo/*.d.ts
+demo/tsconfig.json
