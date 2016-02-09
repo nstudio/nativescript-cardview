@@ -44,8 +44,8 @@ export class CardView extends common.CardView {
       w: UIApplication.sharedApplication().statusBarFrame.size.width - 20
     }, null);
     
-    console.log(`CardView constructor ------`);
-    console.log(this._ios);
+    // console.log(`CardView constructor ------`);
+    // console.log(this._ios);
 
     // XML props are set after construction
     // update appearance at next VM turn

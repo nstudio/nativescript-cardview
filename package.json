@@ -9,6 +9,9 @@
       "ios": "1.5.2"
     }
   },
+  "scripts": {
+    "build": "tsc cardview-common.ts cardview.android.ts cardview.ios.ts"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/bradmartin/nativescript-cardview"
