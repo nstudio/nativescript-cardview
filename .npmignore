@@ -5,3 +5,5 @@ demo/
 nativescript-snackbar.sln
 .sln
 *.sln
+*.png
+CONTRIBUTING.md
