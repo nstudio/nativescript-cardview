@@ -198,7 +198,7 @@ FakesAssemblies/
 
 .vs
 .vs/
-nativescript-fab.sln
+nativescript-cardview.sln
 
 *.js
 demo/platforms
