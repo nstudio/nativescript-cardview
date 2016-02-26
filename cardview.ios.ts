@@ -6,21 +6,21 @@ import {Property, PropertyMetadataSettings} from "ui/core/dependency-observable"
 
 global.moduleMerge(common, exports);
 
-var radiusProp = new Property(
-  "radius",
-  "CardView",
-  new PropertyMetadata(undefined, PropertyMetadataSettings.None)
-);
-var shadowOpacityProp = new Property(
-  "shadowOpacity",
-  "CardView",
-  new PropertyMetadata(undefined, PropertyMetadataSettings.None)
-);
-var shadowRadiusProp = new Property(
-  "shadowRadius",
-  "CardView",
-  new PropertyMetadata(undefined, PropertyMetadataSettings.None)
-);
+// var radiusProp = new Property(
+//   "radius",
+//   "CardView",
+//   new PropertyMetadata(undefined, PropertyMetadataSettings.None)
+// );
+// var shadowOpacityProp = new Property(
+//   "shadowOpacity",
+//   "CardView",
+//   new PropertyMetadata(undefined, PropertyMetadataSettings.None)
+// );
+// var shadowRadiusProp = new Property(
+//   "shadowRadius",
+//   "CardView",
+//   new PropertyMetadata(undefined, PropertyMetadataSettings.None)
+// );
 var backgroundColorProp = new Property(
   "backgroundColor",
   "CardView",
@@ -29,9 +29,9 @@ var backgroundColorProp = new Property(
 
 
 export class CardView extends common.CardView {
-  public radiusProp = radiusProp;
-  public shadowOpacityProp = shadowOpacityProp;
-  public shadowRadiusProp = shadowRadiusProp;
+  // public radiusProp = radiusProp;
+  // public shadowOpacityProp = shadowOpacityProp;
+  // public shadowRadiusProp = shadowRadiusProp;
   public backgroundColorProp = backgroundColorProp;
   private _ios: MaterialCardView;
 
@@ -62,26 +62,26 @@ export class CardView extends common.CardView {
     return this._ios;
   }
   
-  get radius(): string {
-    return this._getValue(this.radiusProp);
-  }
-  set radius(value: string) {
-    this._setValue(this.radiusProp, value);
-  }
+  // get radius(): string {
+  //   return this._getValue(this.radiusProp);
+  // }
+  // set radius(value: string) {
+  //   this._setValue(this.radiusProp, value);
+  // }
   
-  get shadowOpacity(): string {
-    return this._getValue(this.shadowOpacityProp);
-  }
-  set shadowOpacity(value: string) {
-    this._setValue(this.shadowOpacityProp, value);
-  }
+  // get shadowOpacity(): string {
+  //   return this._getValue(this.shadowOpacityProp);
+  // }
+  // set shadowOpacity(value: string) {
+  //   this._setValue(this.shadowOpacityProp, value);
+  // }
   
-  get shadowRadius(): string {
-    return this._getValue(this.shadowRadiusProp);
-  }
-  set shadowRadius(value: string) {
-    this._setValue(this.shadowRadiusProp, value);
-  }
+  // get shadowRadius(): string {
+  //   return this._getValue(this.shadowRadiusProp);
+  // }
+  // set shadowRadius(value: string) {
+  //   this._setValue(this.shadowRadiusProp, value);
+  // }
 
   get backgroundColor(): string {
     return this._getValue(this.backgroundColorProp);
@@ -93,20 +93,20 @@ export class CardView extends common.CardView {
   private updateAppearance() {
     // console.log('updateAppearance');
     
-    if (this.radius) {
-      // console.log(`radius: ${this.radius}`);  
-      this._ios.cardRadius = +this.radius;
-    }
+    // if (this.radius) {
+    //   // console.log(`radius: ${this.radius}`);  
+    //   this._ios.cardRadius = +this.radius;
+    // }
     
-    if (this.shadowOpacity) {
-      // console.log(`shadowOpacity: ${this.shadowOpacity}`);  
-      this._ios.shadowOpacity = +this.shadowOpacity;
-    }
+    // if (this.shadowOpacity) {
+    //   // console.log(`shadowOpacity: ${this.shadowOpacity}`);  
+    //   this._ios.shadowOpacity = +this.shadowOpacity;
+    // }
     
-    if (this.shadowRadius) {
-      // console.log(`shadowRadius: ${this.shadowRadius}`);  
-      this._ios.shadowRadius = +this.shadowRadius;
-    }
+    // if (this.shadowRadius) {
+    //   // console.log(`shadowRadius: ${this.shadowRadius}`);  
+    //   this._ios.shadowRadius = +this.shadowRadius;
+    // }
     
     if (this.backgroundColor) {
       // console.log(`backgroundColor: ${this.backgroundColor}`);  
