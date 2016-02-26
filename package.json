@@ -1,6 +1,6 @@
 {
   "name": "nativescript-cardview",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A NativeScript plugin to provide an XML widget to implement the Material Design CardView.",
   "main": "cardview.js",
   "nativescript": {
@@ -21,6 +21,8 @@
     "native",
     "script",
     "Card",
+    "android",
+    "ios",
     "CardView",
     "Material Design",
     "bradmartin",
