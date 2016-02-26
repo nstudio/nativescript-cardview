@@ -31,6 +31,9 @@ A NativeScript plugin to provide an XML widget to implement the Material Design 
 ```
 
 ## Attributes
+
+**Please note**: iOS uses default appearance settings and the `elevation` and `radius` cannot be set. The `backgroundColor` can be set though on both platforms (Android/iOS).
+
 **elevation** *optional*
 
  An attribute to set the elevation of the card. This will increase the 'drop-shadow' of the card.

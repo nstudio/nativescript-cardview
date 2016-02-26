@@ -8,8 +8,8 @@ var viewModel = new observable.Observable({});
 
 export function pageLoaded(args: observable.EventData) {
     var page = <pages.Page>args.object;
-    var sl = frame.topmost().currentPage.getViewById('stack');
-    console.log('sl = ' + sl);
+    // var sl = frame.topmost().currentPage.getViewById('stack');
+    // console.log('sl = ' + sl);
     page.bindingContext = viewModel;
 }
 
