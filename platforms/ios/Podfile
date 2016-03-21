@@ -1,1 +1,1 @@
-pod 'MaterialCardView', :git => 'https://github.com/cemolcay/MaterialCardView.git'
+pod 'MaterialCard', '~> 1.0.4'

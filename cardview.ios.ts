@@ -6,6 +6,8 @@ import {Property, PropertyMetadataSettings} from "ui/core/dependency-observable"
 
 global.moduleMerge(common, exports);
 
+declare var MaterialCard: any, UIApplication: any, CGRectMake: any;
+
 // var radiusProp = new Property(
 //   "radius",
 //   "CardView",
@@ -33,32 +35,29 @@ export class CardView extends common.CardView {
   // public shadowOpacityProp = shadowOpacityProp;
   // public shadowRadiusProp = shadowRadiusProp;
   // public backgroundColorProp = backgroundColorProp;
-  private _ios: MaterialCardView;
+  private _ios: MaterialCard;
 
   constructor() {
     super();
 
-    this._ios = new MaterialCardView({
-      x: 10,
-      y: uiUtils.ios.getStatusBarHeight() + 10,
-      w: UIApplication.sharedApplication().statusBarFrame.size.width - 20
-    }, null);
+        
+    this._ios = new MaterialCard(CGRectMake(10, uiUtils.ios.getStatusBarHeight() + 10, UIApplication.sharedApplication().statusBarFrame.size.width - 20, 0));
+    // this._ios.cornerRadius = 0;
+    // this._ios.shadowOffsetWidth = 1;
+    // this._ios.shadowOffsetHeight = 8;
+    // this._ios.shadowColor = new Color('#5390E5').ios
+    // this._ios.shadowOpacity = .8;
     
-    // console.log(`CardView constructor ------`);
-    // console.log(this._ios);
-
-    // XML props are set after construction
-    // update appearance at next VM turn
-    setTimeout(() => {
-      this.updateAppearance();
-    });    
+    
+    console.log(`CardView constructor ------`);
+    console.log(this._ios);   
   }
 
-  get ios(): MaterialCardView {
+  get ios(): MaterialCard {
     return this._ios;
   }
 
-  get _nativeView(): MaterialCardView {
+  get _nativeView(): MaterialCard {
     return this._ios;
   }
   
@@ -112,8 +111,5 @@ export class CardView extends common.CardView {
     //   // console.log(`backgroundColor: ${this.backgroundColor}`);  
     //   this._ios.backgroundColor = new Color(this.backgroundColor).ios;
     // }
-    
-    
-    this._ios.materialize();
   }
 }
