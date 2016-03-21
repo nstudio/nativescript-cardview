@@ -10,7 +10,7 @@
     }
   },
   "scripts": {
-    "build": "tsc cardview-common.ts cardview.android.ts cardview.ios.ts"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",

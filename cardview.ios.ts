@@ -21,18 +21,18 @@ global.moduleMerge(common, exports);
 //   "CardView",
 //   new PropertyMetadata(undefined, PropertyMetadataSettings.None)
 // );
-var backgroundColorProp = new Property(
-  "backgroundColor",
-  "CardView",
-  new PropertyMetadata(undefined, PropertyMetadataSettings.None)
-);
+// var backgroundColorProp = new Property(
+//   "backgroundColor",
+//   "CardView",
+//   new PropertyMetadata(undefined, PropertyMetadataSettings.None)
+// );
 
 
 export class CardView extends common.CardView {
   // public radiusProp = radiusProp;
   // public shadowOpacityProp = shadowOpacityProp;
   // public shadowRadiusProp = shadowRadiusProp;
-  public backgroundColorProp = backgroundColorProp;
+  // public backgroundColorProp = backgroundColorProp;
   private _ios: MaterialCardView;
 
   constructor() {
@@ -83,12 +83,12 @@ export class CardView extends common.CardView {
   //   this._setValue(this.shadowRadiusProp, value);
   // }
 
-  get backgroundColor(): string {
-    return this._getValue(this.backgroundColorProp);
-  }
-  set backgroundColor(value: string) {
-    this._setValue(this.backgroundColorProp, value);
-  }
+  // get backgroundColor(): string {
+  //   return this._getValue(this.backgroundColorProp);
+  // }
+  // set backgroundColor(value: string) {
+  //   this._setValue(this.backgroundColorProp, value);
+  // }
 
   private updateAppearance() {
     // console.log('updateAppearance');
@@ -108,10 +108,10 @@ export class CardView extends common.CardView {
     //   this._ios.shadowRadius = +this.shadowRadius;
     // }
     
-    if (this.backgroundColor) {
-      // console.log(`backgroundColor: ${this.backgroundColor}`);  
-      this._ios.backgroundColor = new Color(this.backgroundColor).ios;
-    }
+    // if (this.backgroundColor) {
+    //   // console.log(`backgroundColor: ${this.backgroundColor}`);  
+    //   this._ios.backgroundColor = new Color(this.backgroundColor).ios;
+    // }
     
     
     this._ios.materialize();
