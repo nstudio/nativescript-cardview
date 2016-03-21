@@ -1,4 +1,1 @@
-platform :ios, '8.0'
-use_frameworks!
-
-pod 'MaterialCardView', :git => 'https://github.com/NathanWalker/MaterialCardView.git'
+pod 'MaterialCard', '~> 1.0.4'

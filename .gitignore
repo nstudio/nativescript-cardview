@@ -201,6 +201,7 @@ FakesAssemblies/
 nativescript-cardview.sln
 
 *.js
+*.map
 demo/platforms
 demo/hooks
 demo/app/*.js
