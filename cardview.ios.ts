@@ -8,33 +8,7 @@ global.moduleMerge(common, exports);
 
 declare var MaterialCard: any, UIApplication: any, CGRectMake: any;
 
-// var radiusProp = new Property(
-//   "radius",
-//   "CardView",
-//   new PropertyMetadata(undefined, PropertyMetadataSettings.None)
-// );
-// var shadowOpacityProp = new Property(
-//   "shadowOpacity",
-//   "CardView",
-//   new PropertyMetadata(undefined, PropertyMetadataSettings.None)
-// );
-// var shadowRadiusProp = new Property(
-//   "shadowRadius",
-//   "CardView",
-//   new PropertyMetadata(undefined, PropertyMetadataSettings.None)
-// );
-// var backgroundColorProp = new Property(
-//   "backgroundColor",
-//   "CardView",
-//   new PropertyMetadata(undefined, PropertyMetadataSettings.None)
-// );
-
-
 export class CardView extends common.CardView {
-  // public radiusProp = radiusProp;
-  // public shadowOpacityProp = shadowOpacityProp;
-  // public shadowRadiusProp = shadowRadiusProp;
-  // public backgroundColorProp = backgroundColorProp;
   private _ios: MaterialCard;
 
   constructor() {
@@ -42,12 +16,13 @@ export class CardView extends common.CardView {
 
         
     this._ios = new MaterialCard(CGRectMake(10, uiUtils.ios.getStatusBarHeight() + 10, UIApplication.sharedApplication().statusBarFrame.size.width - 20, 0));
-    // this._ios.cornerRadius = 0;
-    // this._ios.shadowOffsetWidth = 1;
-    // this._ios.shadowOffsetHeight = 8;
-    // this._ios.shadowColor = new Color('#5390E5').ios
-    // this._ios.shadowOpacity = .8;
-    
+
+    // Default values for MaterialCard    
+    // radius = 2;
+    // shadowOffsetWidth = 0;
+    // shadowOffsetHeight = 2;
+    // shadowColor = new Color('#000').ios
+    // shadowOpacity = 0.4;
     
     console.log(`CardView constructor ------`);
     console.log(this._ios);   
@@ -61,55 +36,29 @@ export class CardView extends common.CardView {
     return this._ios;
   }
   
-  // get radius(): string {
-  //   return this._getValue(this.radiusProp);
-  // }
-  // set radius(value: string) {
-  //   this._setValue(this.radiusProp, value);
-  // }
-  
-  // get shadowOpacity(): string {
-  //   return this._getValue(this.shadowOpacityProp);
-  // }
-  // set shadowOpacity(value: string) {
-  //   this._setValue(this.shadowOpacityProp, value);
-  // }
-  
-  // get shadowRadius(): string {
-  //   return this._getValue(this.shadowRadiusProp);
-  // }
-  // set shadowRadius(value: string) {
-  //   this._setValue(this.shadowRadiusProp, value);
-  // }
-
-  // get backgroundColor(): string {
-  //   return this._getValue(this.backgroundColorProp);
-  // }
-  // set backgroundColor(value: string) {
-  //   this._setValue(this.backgroundColorProp, value);
-  // }
-
-  private updateAppearance() {
-    // console.log('updateAppearance');
-    
-    // if (this.radius) {
-    //   // console.log(`radius: ${this.radius}`);  
-    //   this._ios.cardRadius = +this.radius;
-    // }
-    
-    // if (this.shadowOpacity) {
-    //   // console.log(`shadowOpacity: ${this.shadowOpacity}`);  
-    //   this._ios.shadowOpacity = +this.shadowOpacity;
-    // }
-    
-    // if (this.shadowRadius) {
-    //   // console.log(`shadowRadius: ${this.shadowRadius}`);  
-    //   this._ios.shadowRadius = +this.shadowRadius;
-    // }
-    
-    // if (this.backgroundColor) {
-    //   // console.log(`backgroundColor: ${this.backgroundColor}`);  
-    //   this._ios.backgroundColor = new Color(this.backgroundColor).ios;
-    // }
+  set radius(value: string) {
+    // console.log(`radius: ${value}`);
+    this._ios.cornerRadius = +value;
   }
+
+  set shadowOffsetWidth(value: string) {
+    // console.log(`shadowOffsetWidth: ${value}`);
+    this._ios.shadowOffsetWidth = +value;
+  }
+
+  set shadowOffsetHeight(value: string) {
+    // console.log(`shadowOffsetHeight: ${value}`);
+    this._ios.shadowOffsetHeight = +value;
+  }
+
+  set shadowColor(value: string) {
+    // console.log(`shadowColor: ${value}`);  
+    this._ios.shadowColor = new Color(value).ios;
+  }     
+  
+  set shadowOpacity(value: string) {
+    // console.log(`shadowOpacity: ${value}`);  
+    this._ios.shadowOpacity = +value;
+  }
+
 }

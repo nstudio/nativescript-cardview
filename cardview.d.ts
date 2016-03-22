@@ -15,9 +15,9 @@ declare module "cardview" {
     android: any; /* android.support.v7.widget.CardView */
      
     /**
-    * Gets the native [ios widget](https://github.com/cemolcay/MaterialCardView) that represents the user interface for this component. Valid only when running on iOS.
+    * Gets the native [ios widget](https://github.com/NathanWalker/MaterialCard) that represents the user interface for this component. Valid only when running on iOS.
     */
-    ios: any; /* MaterialCardView */
+    ios: any; /* MaterialCard */
 
     /**
     * Called for every child element declared in xml.

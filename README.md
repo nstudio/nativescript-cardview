@@ -32,22 +32,51 @@ A NativeScript plugin to provide an XML widget to implement the Material Design 
 
 ## Attributes
 
-**Please note**: iOS uses default appearance settings and the `elevation` and `radius` cannot be set. The `backgroundColor` can be set though on both platforms (Android/iOS).
-
-**elevation** *optional*
-
- An attribute to set the elevation of the card. This will increase the 'drop-shadow' of the card.
-There can be some performance impact when using a very high elevation value.
-
-**radius** *optional*
+* **radius** *optional*
 
 An attribute to control the 'border-radius' of the card.
 
-**backgroundColor** *optional*
+* **backgroundColor** *optional*
 
 This uses the internal backgroundColor stying provided by NativeScript, but I wanted to point out that if you apply this
 you will lose any elevation and radius property set. This could be enhanced in the future to override the NativeScript styling
 to use the native method available on the CardView component.
+
+### Platform specific options
+
+#### Android
+
+* **elevation** *optional*
+
+ An attribute to set the elevation of the card. This will increase the 'drop-shadow' of the card.
+There can be some performance impact when using a very high elevation value.
+
+#### iOS
+
+* **shadowOffsetWidth** *optional*
+
+An attribute to offset the x position of the shadow behind the card.
+ 
+* **shadowOffsetHeight** *optional*
+
+An attribute to offset the y position of the shadow behind the card.
+
+* **shadowColor** *optional*
+
+An attribute to set the color of the shadow behind the card.
+
+* **shadowOpacity** *optional*
+
+An attribute to set the opacity of the shadow behind the card.
+
+The default values are set to:
+``` 
+radius = 2;
+shadowOffsetWidth = 0;
+shadowOffsetHeight = 2;
+shadowColor = new Color('#000').ios
+shadowOpacity = 0.4;
+```
 
 ## Sample Screenshots
 
