@@ -5,7 +5,7 @@
   "main": "cardview.js",
   "nativescript": {
     "platforms": {
-      "android": "1.7.0",
+      "android": "1.7.1",
       "ios": "1.7.0"
     }
   },

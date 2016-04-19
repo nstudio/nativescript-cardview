@@ -14,7 +14,7 @@
                 <grid-layout rows="200, auto, auto" columns="auto, auto, *">
                     <image src="~/images/batman.jpg" stretch="aspectFill" colSpan="3" row="0" />
                     <label text="Batman wants to be friends?" class="info" textWrap="true" row="1" colSpan="3" />          
-                    <button text="DECLINE" tap="goAway" class="clear-btn blue" row="2" col="0" />
+                    <button text="DECLINE" tap="{{ goAway }}" class="clear-btn blue" row="2" col="0" />
                     <button text="ACCEPT" class="clear-btn blue" row="2" col="1" />
                 </grid-layout>
             </Card:CardView>
@@ -51,7 +51,7 @@
                 <grid-layout rows="200, auto, auto" columns="auto, auto, *">
                     <image src="~/images/joker.jpg" stretch="aspectFill" colSpan="3" row="0" />
                     <label text="Joker wants to talk?" class="info" textWrap="true" row="1" colSpan="3" />          
-                    <button text="DECLINE" tap="goAwayJoker" class="clear-btn blue" row="2" col="0" />
+                    <button text="DECLINE" tap="{{ goAwayJoker }}" class="clear-btn blue" row="2" col="0" />
                     <button text="ACCEPT" class="clear-btn blue" row="2" col="1" />
                 </grid-layout>
             </Card:CardView>      

@@ -1,53 +1,29 @@
-﻿import common = require("./cardview-common");
+﻿import {ContentView} from 'ui/content-view';
 import {PropertyMetadata} from "ui/core/proxy";
 import {Property, PropertyMetadataSettings} from "ui/core/dependency-observable";
 
-global.moduleMerge(common, exports);
-
-var radiusProp = new Property(
-  "radius",
-  "CardView",
-  new PropertyMetadata(undefined, PropertyMetadataSettings.None)
-);
-var elevationProp = new Property(
-  "elevation",
-  "CardView",
-  new PropertyMetadata(undefined, PropertyMetadataSettings.None)
-);
-
-export class CardView extends common.CardView {
-  public static radiusProp = radiusProp;
-  public static elevationProp = elevationProp;
+export class CardView extends ContentView {
+  private _radius: number;
+  private _elevation: number;
   private _android: android.support.v7.widget.CardView;
-
-  constructor() {
-    super();
-  }
-
-  get android(): android.support.v7.widget.CardView {
-    return this._android;
-  }
 
   get _nativeView(): android.support.v7.widget.CardView {
     return this._android;
   }
 
-  get radius(): number {
-    return this._getValue(CardView.radiusProp);
-  }
   set radius(value: number) {
-    this._setValue(CardView.radiusProp, value);
+    this._radius = value;
+    if (this._android)
+      this._android.setRadius(value);
   }
 
-  get elevation(): number {
-    return this._getValue(CardView.elevationProp);
-  }
   set elevation(value: number) {
-    this._setValue(CardView.elevationProp, value);
+    this._elevation = value;
+    if (this._android)
+      this._android.setCardElevation(value);
   }
 
   public _createUI() {
-
     this._android = new android.support.v7.widget.CardView(this._context);
 
     if (!this._androidViewId) {
@@ -55,11 +31,10 @@ export class CardView extends common.CardView {
     }
     this._android.setId(this._androidViewId);
 
-    if (this.radius)
-      this._android.setRadius(this.radius);
+    if (this._radius)
+      this.radius = this._radius;
 
-    if (this.elevation)
-      this._android.setCardElevation(this.elevation);
-
+    if (this._elevation)
+      this.elevation = this._elevation;
   }
 }
