@@ -1,3 +1,6 @@
+﻿[![npm](https://img.shields.io/npm/v/nativescript-cardview.svg)](https://www.npmjs.com/package/nativescript-cardview)
+[![npm](https://img.shields.io/npm/dt/nativescript-cardview.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-cardview)
+
 ﻿# NativeScript CardView :diamonds: :clubs:
 
 A NativeScript plugin to provide an XML widget to implement the Material Design CardView component.
