@@ -17,7 +17,7 @@ A NativeScript plugin to provide an XML widget to implement the Material Design 
 
  <span style="color:red">IMPORTANT: </span>*Make sure you include `xmlns:Card="nativescript-cardview"` on the Page element*
 
-###
+### XML
 ```XML
 <Page xmlns:Card="nativescript-cardview">
    <StackLayout>     
@@ -33,7 +33,7 @@ A NativeScript plugin to provide an XML widget to implement the Material Design 
 </Page>
 ```
 
-###
+### CSS
 ```CSS
 .cardStyle {
     background-color: #3489db;
