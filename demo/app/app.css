@@ -31,7 +31,7 @@ button {
 }
 
 .clear-btn {
-    background-color: transparent;
+    background-color: white;
     padding:5px;
 }
 
@@ -59,4 +59,14 @@ button {
     horizontal-align: center;
     vertical-align: center;
     text-align: center;
+}
+
+.blackCard {
+    background-color: #333;
+    color: white;
+}
+
+.blueCard {
+    background-color: #3489db;
+    color: white;
 }

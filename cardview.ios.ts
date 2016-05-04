@@ -25,6 +25,10 @@ export class CardView extends ContentView {
     // console.log(this._ios);   
   }
 
+  get ios(): MaterialCard {
+    return this._ios;
+  }
+
   get _nativeView(): MaterialCard {
     return this._ios;
   }
