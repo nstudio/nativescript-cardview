@@ -3,6 +3,7 @@ import {Color} from "color";
 import * as uiUtils from 'ui/utils';
 import {PropertyMetadata} from 'ui/core/proxy';
 import {Property, PropertyMetadataSettings} from 'ui/core/dependency-observable';
+import * as Platform from 'platform';
 
 declare var MaterialCard: any, UIApplication: any, CGRectMake: any;
 
@@ -11,8 +12,8 @@ export class CardView extends ContentView {
 
   constructor() {
     super();
- 
-    this._ios = new MaterialCard(CGRectMake(10, uiUtils.ios.getStatusBarHeight() + 10, UIApplication.sharedApplication().statusBarFrame.size.width - 20, 0));
+    let width = Platform.screen.mainScreen.widthDIPs - 20;
+    this._ios = new MaterialCard(CGRectMake(10, 30, width, 0));
 
     // Default values for MaterialCard    
     // radius = 2;
