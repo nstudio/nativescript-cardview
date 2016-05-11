@@ -207,3 +207,4 @@ demo/hooks
 demo/app/*.js
 demo/*.d.ts
 demo/tsconfig.json
+.DS_Store
