@@ -3,8 +3,12 @@
 .vs/
 demo/
 screenshots/
-nativescript-snackbar.sln
 .sln
 *.sln
 *.png
 CONTRIBUTING.md
+*.ts
+!index.d.ts
+!cardview.d.ts
+*.map
+tsconfig.json
