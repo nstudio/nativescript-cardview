@@ -9,6 +9,6 @@ screenshots/
 CONTRIBUTING.md
 *.ts
 !index.d.ts
-!cardview.d.ts
 *.map
 tsconfig.json
+*.log
