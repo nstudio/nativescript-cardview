@@ -1,8 +1,9 @@
+import { ContentView } from 'ui/content-view';
 /**
  * Contains the CardView class, which represents a card view component.
  */
 
-export declare class CardView {
+export declare class CardView extends ContentView {
 
     /**
       * Gets the native [android widget](https://developer.android.com/reference/android/support/v7/widget/CardView.html) that represents the user interface for this component. Valid only when running on Android OS.
