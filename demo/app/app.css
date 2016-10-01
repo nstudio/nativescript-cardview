@@ -70,3 +70,11 @@ button {
     background-color: #3489db;
     color: white;
 }
+
+.jokerCard {
+    background-color: yellow;
+}
+
+.whiteCard {
+    background-color:#fff;
+}

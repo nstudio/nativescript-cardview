@@ -31,12 +31,12 @@
                     </grid-layout>
                 </Card:CardView>
             </grid-layout>
-            <Card:CardView margin="10" backgroundColor="#fff">
+            <Card:CardView margin="10" class="whiteCard">
                 <grid-layout rows="auto" columns="*" padding="5">
                     <label text="The following display options:" class="info" textWrap="true" row="0" col="0" />
                 </grid-layout>
             </Card:CardView>
-            <Card:CardView margin="10" id="jokerCard" elevation="50" shadowColor="#FE00FC" shadowOpacity="1">
+            <Card:CardView margin="10" id="jokerCard" class="jokerCard" elevation="50" shadowColor="#FE00FC" shadowOpacity="1">
                 <grid-layout rows="200, auto, auto" columns="auto, auto, *">
                     <image src="~/images/joker.jpg" stretch="aspectFill" colSpan="3" row="0" />
                     <label text="Joker wants to talk?" class="info" textWrap="true" row="1" colSpan="3" />
@@ -45,20 +45,20 @@
                 </grid-layout>
             </Card:CardView>
             <grid-layout rows="*" columns="*, *">
-                <Card:CardView col="0" margin="10" radius="20">
+                <Card:CardView col="0" margin="10" radius="20" class="whiteCard">
                     <grid-layout rows="auto, auto" columns="auto" padding="8">
                         <label text="Budget" textWrap="true" class="size16" row="0" />
                         <label text="123.4M" textWrap="true" class="title" row="1" />
                     </grid-layout>
                 </Card:CardView>
-                <Card:CardView col="1" margin="10" elevation="25">
+                <Card:CardView col="1" margin="10" elevation="25" class="whiteCard">
                     <grid-layout rows="auto, auto" columns="auto">
                         <label text="Sales" textWrap="true" class="size16" row="0" />
                         <label text="345.8M" textWrap="true" class="title" row="1" />
                     </grid-layout>
                 </Card:CardView>
             </grid-layout>
-            <Card:CardView margin="5" id="facebookCard" radius="30" elevation="15">
+            <Card:CardView margin="5" id="facebookCard" radius="30" elevation="15" class="whiteCard">
                 <grid-layout rows="auto, auto, 250, auto" columns="60, auto, *">
                     <label text="B" class="avatar-circle" row="0" col="0" />
                     <label text="Brad Martin" textWrap="true" margin="10" class="size16 align-center" row="0" col="1" />
@@ -71,7 +71,7 @@
                     </grid-layout>
                 </grid-layout>
             </Card:CardView>
-            <Card:CardView margin="10" radius="10" elevation="15" shadowOffsetWidth="10" shadowOffsetHeight="10">
+            <Card:CardView margin="10" radius="10" elevation="15" shadowOffsetWidth="10" shadowOffsetHeight="10" class="whiteCard">
                 <grid-layout rows="auto, auto, 250, auto" columns="60, auto, *">
                     <label text="N" class="avatar-circle" row="0" col="0" />
                     <label text="Nathanael Anderson" textWrap="true" margin="10" class="size16 align-center" row="0" col="1" />

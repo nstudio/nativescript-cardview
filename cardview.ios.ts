@@ -4,6 +4,7 @@ import {PropertyMetadata} from 'ui/core/proxy';
 import {Property, PropertyMetadataSettings} from 'ui/core/dependency-observable';
 import { screen } from 'platform';
 import * as uiUtils from 'ui/utils';
+import style = require("ui/styling/style");
 
 
 declare var MaterialCard: any, UIApplication: any, CGRectMake: any;
@@ -53,3 +54,33 @@ export class CardView extends ContentView {
   }
 
 }
+
+export class CardViewStyler implements style.Styler {
+    private static setBackgroundProperty(view: any, newValue: any) {  
+        if (view._nativeView) {
+          try{
+            
+              // var color = new Color(newValue);
+              // console.log('setting background-color', color.ios);
+              view._nativeView.backgroundColor = newValue;
+            }catch(error){
+                //Do nothing, catch bad color value
+                console.log('bad background-color value:', error);
+            }
+        }
+    }
+
+    private static resetBackgroundProperty(view: any, nativeValue: number) {
+      // Do nothing.
+    }
+
+    public static registerHandlers() {
+        style.registerHandler(style.backgroundColorProperty, new style.StylePropertyChangedHandler(
+          CardViewStyler.setBackgroundProperty, 
+          CardViewStyler.resetBackgroundProperty), "CardView");
+
+        style.registerHandler(style.backgroundInternalProperty, style.ignorePropertyHandler, "CardView");
+    }
+}
+
+CardViewStyler.registerHandlers();
