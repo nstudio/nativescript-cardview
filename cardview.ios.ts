@@ -4,8 +4,7 @@ import {PropertyMetadata} from 'ui/core/proxy';
 import {Property, PropertyMetadataSettings} from 'ui/core/dependency-observable';
 import { screen } from 'platform';
 import * as uiUtils from 'ui/utils';
-import style = require("ui/styling/style");
-
+import style = require('ui/styling/style');
 
 declare var UIView: any, UIApplication: any, CGRectMake: any, CGSizeMake: any;
 

@@ -11,7 +11,7 @@ export declare class CardView extends ContentView {
     android: any /* android.support.v7.widget.CardView */;
 
     /**
-     * Gets the native [ios widget](https://github.com/NathanWalker/MaterialCard) that represents the user interface for this component. Valid only when running on iOS.
+     * Gets the native [ios widget](UIView) that represents the user interface for this component. Valid only when running on iOS.
      */
     ios: any /* MaterialCard */;
 
@@ -19,6 +19,11 @@ export declare class CardView extends ContentView {
     * Gets or set the radius of the card view.
     */
     radius: any;
+
+    /**
+    * Gets or set the shadow radius of the card view.
+    */
+    shadowRadius: any;
 
     /** 
      * Gets or set the elevation of the card view.  ** Valid only when running on Android OS **
