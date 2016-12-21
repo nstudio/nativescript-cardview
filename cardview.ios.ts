@@ -4,25 +4,25 @@ import {PropertyMetadata} from 'ui/core/proxy';
 import {Property, PropertyMetadataSettings} from 'ui/core/dependency-observable';
 import { screen } from 'platform';
 import * as uiUtils from 'ui/utils';
-import style = require("ui/styling/style");
+import style = require('ui/styling/style');
 
-
-declare var MaterialCard: any, UIApplication: any, CGRectMake: any;
+declare var UIView: any, UIApplication: any, CGRectMake: any, CGSizeMake: any;
 
 export class CardView extends ContentView {
-  private _ios: MaterialCard;
+  private _ios: UIView;
 
   constructor() {
     super();
     let width = screen.mainScreen.widthDIPs - 20;
-    this._ios = new MaterialCard(CGRectMake(10, 30, width, 0));
-
-    // Default values for MaterialCard    
-    // radius = 2;
-    // shadowOffsetWidth = 0;
-    // shadowOffsetHeight = 2;
-    // shadowColor = new Color('#000').ios
-    // shadowOpacity = 0.4;
+    this._ios = new UIView(CGRectMake(10, 30, width, 0));
+    this._ios.layer.masksToBounds = false;
+    
+    this.shadowColor = "black";
+    this.radius = "0";
+    this.shadowRadius = "1";
+    this.shadowOpacity = "0.2";
+    this.shadowOffsetHeight = "2";
+    this.shadowOffsetWidth = "0";
   }
 
   get ios(): any {
@@ -34,23 +34,27 @@ export class CardView extends ContentView {
   }
   
   set radius(value: string) {
-    this._ios.cornerRadius = +value;
+    this._ios.layer.cornerRadius = +value;
+  }
+
+  set shadowRadius(value: string) {
+    this._ios.layer.shadowRadius = +value;
   }
 
   set shadowOffsetWidth(value: string) {
-    this._ios.shadowOffsetWidth = +value;
+    this._ios.layer.shadowOffsetWidth = CGSizeMake(value, this._ios.layer.shadowOffset.height);
   }
 
   set shadowOffsetHeight(value: string) {
-    this._ios.shadowOffsetHeight = +value;
+    this._ios.layer.shadowOffsetHeight = CGSizeMake(this._ios.layer.shadowOffset.width, value);
   }
 
   set shadowColor(value: string) {
-    this._ios.shadowColor = new Color(value).ios;
+    this._ios.layer.shadowColor = new Color(value).ios.cgColor;
   }     
   
   set shadowOpacity(value: string) {
-    this._ios.shadowOpacity = +value;
+    this._ios.layer.shadowOpacity = +value;
   }
 
 }
