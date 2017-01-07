@@ -21,7 +21,7 @@ export class CardView extends ContentView {
     this.radius = "0";
     this.shadowRadius = "1";
     this.shadowOpacity = "0.2";
-    this.shadowOffsetHeight = "2";
+    this.shadowOffsetHeight = "1";
     this.shadowOffsetWidth = "0";
   }
 
@@ -42,11 +42,11 @@ export class CardView extends ContentView {
   }
 
   set shadowOffsetWidth(value: string) {
-    this._ios.layer.shadowOffsetWidth = CGSizeMake(value, this._ios.layer.shadowOffset.height);
+    this._ios.layer.shadowOffsetWidth = CGSizeMake(+value, this._ios.layer.shadowOffset.height);
   }
 
   set shadowOffsetHeight(value: string) {
-    this._ios.layer.shadowOffsetHeight = CGSizeMake(this._ios.layer.shadowOffset.width, value);
+    this._ios.layer.shadowOffsetHeight = CGSizeMake(this._ios.layer.shadowOffset.width, +value);
   }
 
   set shadowColor(value: string) {
