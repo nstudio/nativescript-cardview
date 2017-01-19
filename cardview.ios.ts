@@ -16,7 +16,6 @@ export class CardView extends ContentView {
     let width = screen.mainScreen.widthDIPs - 20;
     this._ios = new UIView(CGRectMake(10, 30, width, 0));
     this._ios.layer.masksToBounds = false;
-    
     this.shadowColor = "black";
     this.radius = "0";
     this.shadowRadius = "1";
@@ -42,11 +41,11 @@ export class CardView extends ContentView {
   }
 
   set shadowOffsetWidth(value: string) {
-    this._ios.layer.shadowOffsetWidth = CGSizeMake(+value, this._ios.layer.shadowOffset.height);
+    this._ios.layer.shadowOffset = CGSizeMake(+value, this._ios.layer.shadowOffset.height);
   }
 
   set shadowOffsetHeight(value: string) {
-    this._ios.layer.shadowOffsetHeight = CGSizeMake(this._ios.layer.shadowOffset.width, +value);
+    this._ios.layer.shadowOffset = CGSizeMake(this._ios.layer.shadowOffset.width, +value);
   }
 
   set shadowColor(value: string) {
