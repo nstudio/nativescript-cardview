@@ -13,7 +13,7 @@ A NativeScript plugin to provide an XML widget to implement the Material Design 
 ## Installation
 `npm install nativescript-cardview`
   
-## Usage
+## Vanilla NativeScript
 
  <span style="color:red">IMPORTANT: </span>*Make sure you include `xmlns:Card="nativescript-cardview"` on the Page element*
 
@@ -39,6 +39,27 @@ A NativeScript plugin to provide an XML widget to implement the Material Design 
     background-color: #3489db;
     color: #fff;
 }
+```
+
+
+## Angular NativeScript
+
+```TS
+import * as elementRegistryModule from 'nativescript-angular/element-registry';
+elementRegistryModule.registerElement("CardView", () => require("nativescript-cardview").CardView);
+```
+
+```XML
+<CardView class="cardStyle" margin="10" elevation="40" radius="1" >
+	<GridLayout rows="10,30,30,250, auto, auto,10" columns="10,40, *, 30,10">
+		<Image src="res://profile" stretch="aspectFit" verticalAlignment="stretch" col="1" row="1" rowSpan="2"></Image>
+		<Label class="createdBy text-left" horizontalAlignment="left" [text]="item.CreatedBy" row="1" col="2" textWrap="true"></Label>
+		<Label class="createdOn text-left" horizontalAlignment="left" [text]="item.UpdatedDate" row="2" col="2"></Label>
+		<Image [src]="'https://img.youtube.com/vi/'+item.MediaURL+'/mqdefault.jpg'" stretch="aspectFit" colSpan="3" col="1" row="3"></Image>
+		<Label horizontalAlignment="left" [text]="item.Title" colSpan="3" row="4" textWrap="true" col="1"></Label>
+		<Label  horizontalAlignment="left" [text]="item.Summary" textWrap="true" col="1" row="5" colSpan="3"></Label>
+	</GridLayout>
+</CardView>
 ```
 
 ## Attributes
@@ -91,23 +112,23 @@ Sample 1 |  Sample 2
 -------- | ---------
 ![Sample1](screenshots/sample_card1.png) | ![Sample2](screenshots/sample_card2.png)
 
-Sample 3 | Sample 4
--------- | -------
-![Sample3](screenshots/sample_card3.png) | ![Sample4](screenshots/sample_card4.png)
 
 #### iOS
 
 Sample 1 |  Sample 2
 -------- | ---------
-![Sample1](screenshots/sample_card1_ios.png) | ![Sample2](screenshots/sample_card2_ios.png)
+![Sample1](screenshots/sample_card1_ios.png) | ![Sample2](screenshots/sample_card3_ios.png)
 
-Sample 3 | Sample 4
--------- | -------
-![Sample3](screenshots/sample_card3_ios.png) | ![Sample4](screenshots/sample_card4_ios.png)
 
 #### Contributing
 [Please follow here](https://github.com/bradmartin/nativescript-cardview/blob/master/CONTRIBUTING.md)
 
 #### Contributors
-- [NathanaelA](https://github.com/NathanaelA)
-- [NathanWalker](https://github.com/NathanWalker)
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+| [<img src="https://avatars1.githubusercontent.com/u/6006148?v=3" width="100px;"/><br /><sub>Brad Martin</sub>](https://bradmartin.net/)<br />
+| [<img src="https://avatars2.githubusercontent.com/u/457187?v=3" width="100px;"/><br /><sub>Nathan Walker</sub>](https://github.com/NathanWalker)<br />
+| [<img src="https://avatars0.githubusercontent.com/u/850871?v=3" width="100px;"/><br /><sub>Nathanael Anderson</sub>](https://github.com/NathanaelA)<br /> 
+| [<img src="https://avatars1.githubusercontent.com/u/7893485?v=3" width="100px;"/><br /><sub>Stanimira Vlaeva</sub>](https://github.com/sis0k0)<br /> 
+| [<img src="https://avatars1.githubusercontent.com/u/1426370?v=3" width="100px;"/><br /><sub>Eddy Verbruggen</sub>](https://github.com/EddyVerbruggen)<br /> 
+<!-- ALL-CONTRIBUTORS-LIST:END -->
