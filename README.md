@@ -6,8 +6,7 @@
 A NativeScript plugin to provide an XML widget to implement the Material Design CardView component.
 
 ##### [Material Design Card Spec](https://www.google.com/design/spec/components/cards.html)
-##### [CardView Android Documentation](http://developer.android.com/intl/zh-tw/reference/android/support/v7/widget/CardView.html) 
-##### iOS version uses the [MaterialCard](https://cocoapods.org/pods/MaterialCard) pod by [Nathan Walker](https://github.com/NathanWalker)
+##### [CardView Android Documentation](http://developer.android.com/intl/zh-tw/reference/android/support/v7/widget/CardView.html)
 
 
 ## Installation
