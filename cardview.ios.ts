@@ -49,7 +49,7 @@ export class CardView extends ContentView {
   }
 
   set shadowColor(value: string) {
-    this._ios.layer.shadowColor = new Color(value).ios.cgColor;
+    this._ios.layer.shadowColor = new Color(value).ios.CGColor;
   }     
   
   set shadowOpacity(value: string) {
