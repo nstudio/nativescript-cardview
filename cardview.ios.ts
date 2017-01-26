@@ -17,10 +17,10 @@ export class CardView extends ContentView {
     this._ios = new UIView(CGRectMake(10, 30, width, 0));
     this._ios.layer.masksToBounds = false;
     this.shadowColor = "black";
-    this.radius = "0";
+    this.radius = "1";
     this.shadowRadius = "1";
-    this.shadowOpacity = "0.2";
-    this.shadowOffsetHeight = "1";
+    this.shadowOpacity = "0.4";
+    this.shadowOffsetHeight = "2";
     this.shadowOffsetWidth = "0";
   }
 

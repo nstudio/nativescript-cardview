@@ -96,6 +96,10 @@ An attribute to set the color of the shadow behind the card.
 
 An attribute to set the opacity of the shadow behind the card.
 
+* **shadowRadius** *optional*
+
+An attribute to set the radius of the shadow (shadow spread) behind the card.
+
 The default values are set to:
 ``` 
 radius = 2;
@@ -103,6 +107,7 @@ shadowOffsetWidth = 0;
 shadowOffsetHeight = 2;
 shadowColor = new Color('#000').ios
 shadowOpacity = 0.4;
+shadowRadius = 1;
 ```
 
 ## Sample Screenshots
@@ -132,4 +137,5 @@ Sample 1 |  Sample 2
 | [<img src="https://avatars0.githubusercontent.com/u/850871?v=3" width="100px;"/><br /><sub>Nathanael Anderson</sub>](https://github.com/NathanaelA)<br /> 
 | [<img src="https://avatars1.githubusercontent.com/u/7893485?v=3" width="100px;"/><br /><sub>Stanimira Vlaeva</sub>](https://github.com/sis0k0)<br /> 
 | [<img src="https://avatars1.githubusercontent.com/u/1426370?v=3" width="100px;"/><br /><sub>Eddy Verbruggen</sub>](https://github.com/EddyVerbruggen)<br /> 
+| [<img src="https://avatars1.githubusercontent.com/u/3605066?v=3" width="100px;"/><br /><sub>Nedim Erkocevic</sub>](https://github.com/manijak)<br /> 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
