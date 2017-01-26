@@ -13,9 +13,9 @@
   "scripts": {
     "build": "tsc",
     "demo.ios": "npm run preparedemo; cd demo; tns emulate ios",
-		"demo.android": "npm run preparedemo; cd demo; tns emulate android",
-		"preparedemo": "npm run build; cd demo; tns plugin remove nativescript-cardview; tns plugin add ..; tns install",
-		"setup": "cd demo; npm install; cd ..; npm run build; cd demo; tns plugin add ..; cd .."
+    "demo.android": "npm run preparedemo; cd demo; tns emulate android",
+    "preparedemo": "npm run build; cd demo; tns plugin remove nativescript-cardview; tns plugin add ..; tns install",
+    "setup": "cd demo; npm install; cd ..; npm run build; cd demo; tns plugin add ..; cd .."
   },
   "repository": {
     "type": "git",
@@ -35,8 +35,7 @@
     "bradmartin",
     "Thorum"
   ],
-  "contributors": [
-    {
+  "contributors": [{
       "name": "Nathanael Anderson",
       "email": "nathan@master-technology",
       "url": "https://github.com/nathanaela"
@@ -45,7 +44,7 @@
       "name": "Nathanael Walker",
       "email": "nathan.walker@infowrap.com",
       "url": "https://github.com/NathanWalker"
-    }, 
+    },
     {
       "name": "Ned",
       "url": "https://github.com/manijak"
