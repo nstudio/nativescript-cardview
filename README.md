@@ -131,10 +131,10 @@ Sample 1 |  Sample 2
 #### Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src="https://avatars1.githubusercontent.com/u/6006148?v=3" width="100px;"/><br /><sub>Brad Martin</sub>](https://bradmartin.net/)<br />
-| [<img src="https://avatars2.githubusercontent.com/u/457187?v=3" width="100px;"/><br /><sub>Nathan Walker</sub>](https://github.com/NathanWalker)<br />
-| [<img src="https://avatars0.githubusercontent.com/u/850871?v=3" width="100px;"/><br /><sub>Nathanael Anderson</sub>](https://github.com/NathanaelA)<br /> 
-| [<img src="https://avatars1.githubusercontent.com/u/7893485?v=3" width="100px;"/><br /><sub>Stanimira Vlaeva</sub>](https://github.com/sis0k0)<br /> 
-| [<img src="https://avatars1.githubusercontent.com/u/1426370?v=3" width="100px;"/><br /><sub>Eddy Verbruggen</sub>](https://github.com/EddyVerbruggen)<br /> 
-| [<img src="https://avatars1.githubusercontent.com/u/3605066?v=3" width="100px;"/><br /><sub>Nedim Erkocevic</sub>](https://github.com/manijak)<br /> 
+
+| [<img src="https://avatars1.githubusercontent.com/u/6006148?v=3" width="100px;"/><br /><sub>Brad Martin</sub>](https://bradmartin.net/) | [<img src="https://avatars2.githubusercontent.com/u/457187?v=3" width="100px;"/><br /><sub>Nathan Walker</sub>](https://github.com/NathanWalker)  |  [<img src="https://avatars0.githubusercontent.com/u/850871?v=3" width="100px;"/><br /><sub>Nathanael Anderson</sub>](https://github.com/NathanaelA)   | [<img src="https://avatars1.githubusercontent.com/u/3605066?v=3" width="100px;"/><br /><sub>Nedim Erkocevic</sub>](https://github.com/manijak)   |   |
+|---|---|---|---|---|
+| [<img src="https://avatars1.githubusercontent.com/u/1426370?v=3" width="100px;"/><br /><sub>Eddy Verbruggen</sub>](https://github.com/EddyVerbruggen)  |  [<img src="https://avatars1.githubusercontent.com/u/7893485?v=3" width="100px;"/><br /><sub>Stanimira Vlaeva</sub>](https://github.com/sis0k0)  | [<img src="https://avatars2.githubusercontent.com/u/3397077?v=3" width="100px;"/><br /><sub>Vladimir Nani</sub>](https://github.com/vladimirnani)   |   |   |
+|   |   |   |   |   |
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->

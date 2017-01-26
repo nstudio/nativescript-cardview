@@ -1,6 +1,4 @@
-﻿import {ContentView} from 'ui/content-view';
-import {PropertyMetadata} from "ui/core/proxy";
-import {Property, PropertyMetadataSettings} from "ui/core/dependency-observable";
+﻿import { ContentView } from 'ui/content-view';
 import { View } from "ui/core/view";
 import { Color } from "color";
 import style = require("ui/styling/style");
@@ -54,13 +52,13 @@ export class CardView extends ContentView {
 export class CardViewStyler implements style.Styler {
 
   private static setBackgroundProperty(view: View, newValue: any) {
-    var card = <android.support.v7.widget.CardView>view.android;
-    var droidColor = new Color(newValue).android;
+    let card = <android.support.v7.widget.CardView>view.android;
+    let droidColor = new Color(newValue).android;
     card.setCardBackgroundColor(droidColor);
   }
 
   private static resetBackgroundProperty(view: View, nativeValue: number) {
-    // Do nothing.
+    // do nothing.
   }
 
   public static registerHandlers() {

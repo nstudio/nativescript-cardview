@@ -1,10 +1,7 @@
-import {ContentView} from 'ui/content-view';
-import {Color} from 'color';
-import {PropertyMetadata} from 'ui/core/proxy';
-import {Property, PropertyMetadataSettings} from 'ui/core/dependency-observable';
-import { screen } from 'platform';
-import * as uiUtils from 'ui/utils';
-import style = require('ui/styling/style');
+import { ContentView } from "ui/content-view";
+import { Color } from "color";
+import { screen } from "platform";
+import style = require("ui/styling/style");
 
 declare var UIView: any, UIApplication: any, CGRectMake: any, CGSizeMake: any;
 
@@ -31,7 +28,7 @@ export class CardView extends ContentView {
   get _nativeView(): any {
     return this._ios;
   }
-  
+
   set radius(value: string) {
     this._ios.layer.cornerRadius = +value;
   }
@@ -50,8 +47,8 @@ export class CardView extends ContentView {
 
   set shadowColor(value: string) {
     this._ios.layer.shadowColor = new Color(value).ios.CGColor;
-  }     
-  
+  }
+
   set shadowOpacity(value: string) {
     this._ios.layer.shadowOpacity = +value;
   }
@@ -59,31 +56,30 @@ export class CardView extends ContentView {
 }
 
 export class CardViewStyler implements style.Styler {
-    private static setBackgroundProperty(view: any, newValue: any) {  
-        if (view._nativeView) {
-          try{
-            
-              // var color = new Color(newValue);
-              // console.log('setting background-color', color.ios);
-              view._nativeView.backgroundColor = newValue;
-            }catch(error){
-                //Do nothing, catch bad color value
-                console.log('bad background-color value:', error);
-            }
-        }
+  private static setBackgroundProperty(view: any, newValue: any) {
+    if (view._nativeView) {
+      try {
+        // var color = new Color(newValue);
+        // console.log('setting background-color', color.ios);
+        view._nativeView.backgroundColor = newValue;
+      } catch (error) {
+        // do nothing, catch bad color value
+        console.log("bad background-color value:", error);
+      }
     }
+  }
 
-    private static resetBackgroundProperty(view: any, nativeValue: number) {
-      // Do nothing.
-    }
+  private static resetBackgroundProperty(view: any, nativeValue: number) {
+    // do nothing.
+  }
 
-    public static registerHandlers() {
-        style.registerHandler(style.backgroundColorProperty, new style.StylePropertyChangedHandler(
-          CardViewStyler.setBackgroundProperty, 
-          CardViewStyler.resetBackgroundProperty), "CardView");
+  public static registerHandlers() {
+    style.registerHandler(style.backgroundColorProperty, new style.StylePropertyChangedHandler(
+      CardViewStyler.setBackgroundProperty,
+      CardViewStyler.resetBackgroundProperty), "CardView");
 
-        style.registerHandler(style.backgroundInternalProperty, style.ignorePropertyHandler, "CardView");
-    }
+    style.registerHandler(style.backgroundInternalProperty, style.ignorePropertyHandler, "CardView");
+  }
 }
 
 CardViewStyler.registerHandlers();
