@@ -39,10 +39,10 @@ export class CardView extends ContentView {
     }
     this._android.setId(this._androidViewId);
 
-    if (this._radius)
+    if (this._radius || this._radius === 0)
       this.radius = this._radius;
 
-    if (this._elevation)
+    if (this._elevation || this._elevation === 0)
       this.elevation = this._elevation;
   }
 }
