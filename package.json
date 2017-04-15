@@ -1,6 +1,6 @@
 {
   "name": "nativescript-cardview",
-  "version": "1.3.2",
+  "version": "2.0.0-rc.0",
   "description": "A NativeScript plugin for Material Design CardView component.",
   "main": "cardview",
   "typings": "index.d.ts",
@@ -70,6 +70,9 @@
   "license": "Apache-2.0",
   "bugs": "https://github.com/bradmartin/nativescript-cardview/issues",
   "homepage": "https://github.com/bradmartin/nativescript-cardview",
+  "peerDependencies": {
+    "tns-core-modules": ">=3.0.0 || >=3.0.0-rc.1 || >=3.0.0-2017"
+  },
   "devDependencies": {
     "tns-core-modules": "3.0.0-rc.2"
   }
