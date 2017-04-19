@@ -1,7 +1,4 @@
-﻿import * as app from 'application';
-import {Color} from 'color';
-import * as platform from 'platform';
-import {Demo} from "./main-view-model";
+﻿import { Demo } from "./main-view-model";
 
 function pageLoaded(args) {
   var page = args.object;

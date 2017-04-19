@@ -1,8 +1,7 @@
-import * as frame from 'ui/frame';
-import * as app from 'application';
-import { Observable, EventData } from 'data/observable';
+import { EventData, Observable } from "data/observable";
+import { CardView } from "nativescript-cardview";
 import { isAndroid, isIOS } from "platform";
-import { CardView } from 'nativescript-cardview';
+import * as frame from "ui/frame";
 
 export class Demo extends Observable {
 
@@ -18,19 +17,19 @@ export class Demo extends Observable {
       opacity: 0,
       duration: 1000
     }).then(() => {
-      card.visibility = 'collapsed';
+      card.visibility = 'collapse';
     });
   }
 
   public goAwayJoker(args) {
     let page = frame.topmost().currentPage;
-    let card = page.getViewById('jokerCard');
+    let card = <CardView>page.getViewById('jokerCard');
     card.animate({
       scale: { x: 0, y: 0 },
       opacity: 0,
       duration: 1000
     }).then(() => {
-      card.visibility = 'collapsed';
+      card.visibility = 'collapse';
     });
   }
 
@@ -43,6 +42,4 @@ export class Demo extends Observable {
       console.log('card native ios = ' + card.ios);
     }
   }
-
 }
-

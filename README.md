@@ -10,8 +10,14 @@ A NativeScript plugin to provide an XML widget to implement the Material Design 
 
 
 ## Installation
+
+##### NativeScript 2.x
+- `tns plugin add nativescript-cardview@^1.3.2`
+
+##### NativeScript 3+
 - `tns plugin add nativescript-cardview`
-- *Be sure to run a new build after adding plugins to avoid any issues. Here is a post with some details: https://bradmartin.net/2016/07/20/ahhh-this-nativescript-plugin-doesnt-work/*
+
+*Be sure to run a new build after adding plugins to avoid any issues. Here is a post with some details: https://bradmartin.net/2016/07/20/ahhh-this-nativescript-plugin-doesnt-work/*
   
 ## Vanilla NativeScript
 
