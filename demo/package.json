@@ -5,11 +5,11 @@
       "version": "3.0.0-rc.1"
     },
     "tns-ios": {
-      "version": "3.0.0-rc.1-2017-3-28-2"
+      "version": "3.0.0-rc.1"
     }
   },
   "dependencies": {
-    "nativescript-cardview": "file:..",
+    "nativescript-cardview": "file:///Users/nathan/Documents/github/bradmartin/nativescript-cardview",
     "tns-core-modules": "rc"
   },
   "devDependencies": {
