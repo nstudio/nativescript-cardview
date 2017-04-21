@@ -144,3 +144,7 @@ Sample 1 |  Sample 2
 |   |   |   |   |   |
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
+```
+githubcontrib --owner bradmartin --repository nativescript-cardview --sha master --since 2016-022-01 --cols 6 --sortOrder desc --format md --showlogin true  > contributions.md
+```
