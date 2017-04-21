@@ -136,14 +136,13 @@ Sample 1 |  Sample 2
 
 #### Contributors
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+[<img alt="bradmartin" src="https://avatars3.githubusercontent.com/u/6006148?v=3&s=117" width="117">](https://github.com/bradmartin) |[<img alt="NathanWalker" src="https://avatars1.githubusercontent.com/u/457187?v=3&s=117" width="117">](https://github.com/NathanWalker) |[<img alt="manijak" src="https://avatars3.githubusercontent.com/u/3605066?v=3&s=117" width="117">](https://github.com/manijak) |[<img alt="NathanaelA" src="https://avatars0.githubusercontent.com/u/850871?v=3&s=117" width="117">](https://github.com/NathanaelA) |[<img alt="EddyVerbruggen" src="https://avatars2.githubusercontent.com/u/1426370?v=3&s=117" width="117">](https://github.com/EddyVerbruggen) |[<img alt="sis0k0" src="https://avatars1.githubusercontent.com/u/7893485?v=3&s=117" width="117">](https://github.com/sis0k0) |
+:---: |:---: |:---: |:---: |:---: |:---: |
+[bradmartin](https://github.com/bradmartin) |[NathanWalker](https://github.com/NathanWalker) |[manijak](https://github.com/manijak) |[NathanaelA](https://github.com/NathanaelA) |[EddyVerbruggen](https://github.com/EddyVerbruggen) |[sis0k0](https://github.com/sis0k0) |
 
-| [<img src="https://avatars1.githubusercontent.com/u/6006148?v=3" width="100px;"/><br /><sub>Brad Martin</sub>](https://bradmartin.net/) | [<img src="https://avatars2.githubusercontent.com/u/457187?v=3" width="100px;"/><br /><sub>Nathan Walker</sub>](https://github.com/NathanWalker)  |  [<img src="https://avatars0.githubusercontent.com/u/850871?v=3" width="100px;"/><br /><sub>Nathanael Anderson</sub>](https://github.com/NathanaelA)   | [<img src="https://avatars1.githubusercontent.com/u/3605066?v=3" width="100px;"/><br /><sub>Nedim Erkocevic</sub>](https://github.com/manijak)   | 
-|---|---|---|---|---|
-| [<img src="https://avatars1.githubusercontent.com/u/1426370?v=3" width="100px;"/><br /><sub>Eddy Verbruggen</sub>](https://github.com/EddyVerbruggen)  |  [<img src="https://avatars1.githubusercontent.com/u/7893485?v=3" width="100px;"/><br /><sub>Stanimira Vlaeva</sub>](https://github.com/sis0k0)  | [<img src="https://avatars2.githubusercontent.com/u/3397077?v=3" width="100px;"/><br /><sub>Vladimir Nani</sub>](https://github.com/vladimirnani)   |    |
-|   |   |   |   |   |
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+[<img alt="vladimirnani" src="https://avatars0.githubusercontent.com/u/3397077?v=3&s=117" width="117">](https://github.com/vladimirnani) |[<img alt="DickSmith" src="https://avatars0.githubusercontent.com/u/6675511?v=3&s=117" width="117">](https://github.com/DickSmith) |
+:---: |:---: |
+[vladimirnani](https://github.com/vladimirnani) |[DickSmith](https://github.com/DickSmith) |
 
 ```
 githubcontrib --owner bradmartin --repository nativescript-cardview --sha master --since 2016-022-01 --cols 6 --sortOrder desc --format md --showlogin true  > contributions.md
