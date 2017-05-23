@@ -1,4 +1,5 @@
-﻿[![npm](https://img.shields.io/npm/v/nativescript-cardview.svg)](https://www.npmjs.com/package/nativescript-cardview)
+﻿[![nStudio Plugin](https://img.shields.io/badge/nStudio-Plugin-blue.svg)](http://nstudio.io)
+[![npm](https://img.shields.io/npm/v/nativescript-cardview.svg)](https://www.npmjs.com/package/nativescript-cardview)
 [![npm](https://img.shields.io/npm/dt/nativescript-cardview.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-cardview)
 
 # NativeScript CardView :diamonds: :clubs:
@@ -121,14 +122,14 @@ shadowRadius = 1;
 
 Sample 1 |  Sample 2
 -------- | ---------
-![Sample1](screenshots/sample_card1.png) | ![Sample2](screenshots/sample_card2.png)
+![Sample1](images/sample_card1.png) | ![Sample2](images/sample_card2.png)
 
 
 #### iOS
 
 Sample 1 |  Sample 2
 -------- | ---------
-![Sample1](screenshots/sample_card1_ios.png) | ![Sample2](screenshots/sample_card3_ios.png)
+![Sample1](images/sample_card1_ios.png) | ![Sample2](images/sample_card3_ios.png)
 
 
 #### Contributing
@@ -144,6 +145,8 @@ Sample 1 |  Sample 2
 :---: |:---: |
 [vladimirnani](https://github.com/vladimirnani) |[DickSmith](https://github.com/DickSmith) |
 
-```
-githubcontrib --owner bradmartin --repository nativescript-cardview --sha master --since 2016-022-01 --cols 6 --sortOrder desc --format md --showlogin true  > contributions.md
-```
+
+## [nStudio, LLC](http://nstudio.io)
+[![nStudio](./logos/nstudio-banner.png "nStudio")](http://nStudio.io)
+
+Do you need assistance on your project or plugin? Contact the nStudio team anytime at <team@nstudio.io> to get up to speed with the best practices in mobile and web app development.
