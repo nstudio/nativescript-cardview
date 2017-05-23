@@ -147,6 +147,6 @@ Sample 1 |  Sample 2
 
 
 ## [nStudio, LLC](http://nstudio.io)
-[![nStudio](./logos/nstudio-banner.png "nStudio")](http://nStudio.io)
+[![nStudio](./images/nstudio-banner.png "nStudio")](http://nStudio.io)
 
 Do you need assistance on your project or plugin? Contact the nStudio team anytime at <team@nstudio.io> to get up to speed with the best practices in mobile and web app development.
