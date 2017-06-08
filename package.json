@@ -12,8 +12,9 @@
   },
   "scripts": {
     "build": "tsc",
-    "demo.ios": "npm run preparedemo; cd demo; tns run ios --emulator",
-    "demo.android": "npm run preparedemo; cd demo; tns run android --emulator",
+    "demo.ios": "npm run preparedemo; cd demo; tns run ios",
+    "debug.ios": "npm run preparedemo; cd demo; tns debug ios",
+    "demo.android": "npm run preparedemo; cd demo; tns run android",
     "preparedemo": "npm run build; cd demo; tns plugin remove nativescript-cardview; tns plugin add ..",
     "setup": "npm i && npm run build && cd demo && tns plugin add .. && cd .."
   },

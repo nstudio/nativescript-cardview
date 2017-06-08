@@ -5,7 +5,7 @@
     <action-bar title="CardView" backgroundColor="#009688" color="#fff" />
     <scroll-view>
         <stack-layout>
-            <Card:CardView class="blackCard" loaded="cardLoaded" elevation="20" margin="10" id="batCard">
+            <Card:CardView class="blackCard" radius="10" loaded="cardLoaded" elevation="20" margin="10" id="batCard">
                 <grid-layout rows="200, auto, auto" columns="auto, auto, *">
                     <image src="~/images/batman.jpg" stretch="aspectFill" margin="10" colSpan="3" row="0" />
                     <label text="Batman wants to be friends?" class="info" textWrap="true" row="1" colSpan="3" />
@@ -22,7 +22,7 @@
                         <button text="&#xE80D;" class="Material info clear-btn gray" row="1" col="2" />
                     </grid-layout>
                 </Card:CardView>
-                <Card:CardView margin="10" col="1" elevation="20">
+                <Card:CardView backgroundColor="red" radius="30" margin="10" col="1" elevation="20">
                     <grid-layout rows="120, auto" columns="*, *, *">
                         <image src="~/images/plane.jpg" stretch="aspectFill" colSpan="3" row="0" />
                         <button text="&#xE55F;" class="Material info clear-btn gray" row="1" col="0" />

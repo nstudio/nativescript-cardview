@@ -1,7 +1,7 @@
 import { Color } from "color";
 import { screen } from "platform";
 import {
-  CardViewCommon, radiusProperty, shadowColorProperty, shadowOffsetHeightProperty, shadowOffsetWidthProperty,
+  CardViewCommon, backgroundColorProperty, backgroundInternalProperty, radiusProperty, shadowColorProperty, shadowOffsetHeightProperty, shadowOffsetWidthProperty,
   shadowOpacityProperty, shadowRadiusProperty
 } from "./cardview-common";
 
@@ -28,6 +28,18 @@ export class CardView extends CardViewCommon {
 
   [radiusProperty.setNative](value: number) {
     this.nativeView.layer.cornerRadius = value;
+  }
+
+  [radiusProperty.getDefault](): number {
+    return this.nativeView.layer.cornerRadius;
+  }
+
+  [backgroundColorProperty.setNative](value: Color) {
+    this.nativeView.backgroundColor = value.ios;
+  }
+
+  [backgroundInternalProperty.setNative](value) {
+    this.nativeView.backgroundColor = new Color(value.color+"").ios;
   }
 
   [shadowRadiusProperty.setNative](value: number) {
