@@ -4,7 +4,6 @@ import { ContentView } from "ui/content-view";
  * Contains the CardView class, which represents a card view component.
  */
 export class CardView extends ContentView {
-
   /**
    * Gets the native [android widget](https://developer.android.com/reference/android/support/v7/widget/CardView.html) that represents the user interface for this component. Valid only when running on Android OS.
    */
@@ -34,7 +33,6 @@ export class CardView extends ContentView {
    * Set the shadow offset width of the card view. ** Valid only when running on iOS **
    */
   shadowOffsetWidth: number;
-
 
   /**
    * Set the shadow offset height of the card view. ** Valid only when running on iOS **

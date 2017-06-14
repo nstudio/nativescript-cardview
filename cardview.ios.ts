@@ -1,14 +1,20 @@
 import { Color } from "color";
 import { screen } from "platform";
 import {
-  CardViewCommon, backgroundColorProperty, backgroundInternalProperty, radiusProperty, shadowColorProperty, shadowOffsetHeightProperty, shadowOffsetWidthProperty,
-  shadowOpacityProperty, shadowRadiusProperty
+  CardViewCommon,
+  backgroundColorProperty,
+  backgroundInternalProperty,
+  radiusProperty,
+  shadowColorProperty,
+  shadowOffsetHeightProperty,
+  shadowOffsetWidthProperty,
+  shadowOpacityProperty,
+  shadowRadiusProperty
 } from "./cardview-common";
 
 declare var UIView: any, CGRectMake: any, CGSizeMake: any;
 
 export class CardView extends CardViewCommon {
-
   constructor() {
     super();
     let width = screen.mainScreen.widthDIPs - 20;
@@ -39,7 +45,7 @@ export class CardView extends CardViewCommon {
   }
 
   [backgroundInternalProperty.setNative](value) {
-    this.nativeView.backgroundColor = new Color(value.color+"").ios;
+    this.nativeView.backgroundColor = new Color(value.color + "").ios;
   }
 
   [shadowRadiusProperty.setNative](value: number) {
@@ -47,11 +53,17 @@ export class CardView extends CardViewCommon {
   }
 
   [shadowOffsetWidthProperty.setNative](value: number) {
-    this.nativeView.layer.shadowOffset = CGSizeMake(value, this.nativeView.layer.shadowOffset.height);
+    this.nativeView.layer.shadowOffset = CGSizeMake(
+      value,
+      this.nativeView.layer.shadowOffset.height
+    );
   }
 
   [shadowOffsetHeightProperty.setNative](value: number) {
-    this.nativeView.layer.shadowOffset = CGSizeMake(this.nativeView.layer.shadowOffset.width, value);
+    this.nativeView.layer.shadowOffset = CGSizeMake(
+      this.nativeView.layer.shadowOffset.width,
+      value
+    );
   }
 
   [shadowColorProperty.setNative](value: Color) {

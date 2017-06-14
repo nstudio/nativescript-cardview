@@ -16,7 +16,14 @@
     "debug.ios": "npm run preparedemo; cd demo; tns debug ios",
     "demo.android": "npm run preparedemo; cd demo; tns run android",
     "preparedemo": "npm run build; cd demo; tns plugin remove nativescript-cardview; tns plugin add ..",
-    "setup": "npm i && npm run build && cd demo && tns plugin add .. && cd .."
+    "setup": "npm i && npm run build && cd demo && tns plugin add .. && cd ..",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -64,6 +71,10 @@
     {
       "name": "Dick Smith",
       "url": "https://github.com/DickSmith"
+    },
+    {
+      "name": "Daniel Leal",
+      "url": "https://github.com/danielgek"
     }
   ],
   "author": {
@@ -78,6 +89,9 @@
     "tns-core-modules": "^3.0.0"
   },
   "devDependencies": {
+    "husky": "^0.13.4",
+    "lint-staged": "^3.6.1",
+    "prettier": "^1.4.4",
     "tns-core-modules": "^3.0.0",
     "tns-platform-declarations": "^3.0.0",
     "typescript": "^2.2.0"

@@ -1,12 +1,15 @@
 import { Color } from "color";
 import {
-  backgroundColorProperty, backgroundInternalProperty, CardViewCommon, elevationProperty, radiusProperty
+  backgroundColorProperty,
+  backgroundInternalProperty,
+  CardViewCommon,
+  elevationProperty,
+  radiusProperty
 } from "./cardview-common";
 
 declare var android: any;
 
 export class CardView extends CardViewCommon {
-
   private _androidViewId: number;
 
   get android(): any {
@@ -44,7 +47,9 @@ export class CardView extends CardViewCommon {
   [backgroundInternalProperty.setNative](value: any) {
     if (value) {
       try {
-        this.nativeView.setCardBackgroundColor(new Color(value.color+"").android);
+        this.nativeView.setCardBackgroundColor(
+          new Color(value.color + "").android
+        );
       } catch (error) {
         // do nothing, catch bad color value
         console.log("bad background-color value:", error);
