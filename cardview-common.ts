@@ -19,7 +19,7 @@ export class CardViewCommon extends ContentView {
   /**
    * Gets the native [ios widget](UIView) that represents the user interface for this component. Valid only when running on iOS.
    */
-  ios: any /* MaterialCard */;
+  ios: any /* UIView */;
 
   /**
    * Gets or set the radius of the card view.
