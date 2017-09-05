@@ -41,11 +41,14 @@ export class CardView extends CardViewCommon {
   }
 
   [backgroundColorProperty.setNative](value: Color) {
-    this.nativeView.backgroundColor = value.ios;
+    this.nativeView.backgroundColor =
+      value !== undefined ? value.ios : new Color("#FFFFFF").ios;
   }
 
   [backgroundInternalProperty.setNative](value) {
-    this.nativeView.backgroundColor = new Color(value.color + "").ios;
+    this.nativeView.backgroundColor = new Color(
+      value.color !== undefined ? value.color + "" : "#FFFFFF"
+    ).ios;
   }
 
   [shadowRadiusProperty.setNative](value: number) {
