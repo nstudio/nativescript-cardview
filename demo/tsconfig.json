@@ -1,15 +1,31 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "moduleResolution": "node",
         "target": "es5",
-        "inlineSourceMap": true,
+        "module": "commonjs",
+        "declaration": false,
+        "removeComments": true,
+        "noLib": false,
+        "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
+        "pretty": true,
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false,
         "noEmitHelpers": true,
+        "noEmitOnError": false,
+        "noImplicitAny": false,
+        "noImplicitReturns": true,
+        "noImplicitUseStrict": false,
+        "noFallthroughCasesInSwitch": true,
         "lib": [
             "es6",
-            "dom"
+            "dom",
+            "es2015.iterable"
         ],
+        "typeRoots": [
+            "./node_modules/@types",
+            "./node_modules"
+        ],
+        "types": [],
         "baseUrl": ".",
         "paths": {
             "*": [
@@ -21,5 +37,6 @@
     "exclude": [
         "node_modules",
         "platforms"
-    ]
+    ],
+    "compileOnSave": false
 }
