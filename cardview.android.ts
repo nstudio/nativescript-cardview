@@ -36,7 +36,9 @@ export class CardView extends CardViewCommon {
   [backgroundColorProperty.setNative](value: Color) {
     if (value) {
       try {
-        this.nativeView.setCardBackgroundColor(value.android);
+        this.nativeView.setCardBackgroundColor(
+          value !== undefined ? value.android : new Color("#FFFFFF").android
+        );
       } catch (error) {
         // do nothing, catch bad color value
         console.log("bad background-color value:", error);
@@ -48,7 +50,8 @@ export class CardView extends CardViewCommon {
     if (value) {
       try {
         this.nativeView.setCardBackgroundColor(
-          new Color(value.color + "").android
+          new Color(value.color !== undefined ? value.color + "" : "#FFFFFF")
+            .android
         );
       } catch (error) {
         // do nothing, catch bad color value
