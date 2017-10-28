@@ -86,13 +86,13 @@
   "bugs": "https://github.com/bradmartin/nativescript-cardview/issues",
   "homepage": "https://github.com/bradmartin/nativescript-cardview",
   "peerDependencies": {
-    "tns-core-modules": "~3.2.0"
+    "tns-core-modules": "~3.3.0"
   },
   "devDependencies": {
     "husky": "^0.13.4",
     "lint-staged": "^3.6.1",
     "prettier": "^1.4.4",
-    "tns-core-modules": "~3.2.0",
+    "tns-core-modules": "^3.2.0",
     "tns-platform-declarations": "~3.2.0",
     "typescript": "2.5.2"
   }
