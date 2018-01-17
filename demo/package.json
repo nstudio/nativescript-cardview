@@ -1,10 +1,12 @@
 {
   "nativescript": {
-    "id": "org.nativescript.demo"
+    "id": "org.nativescript.demo",
+    "tns-android": {
+      "version": "3.4.1"
+    }
   },
   "dependencies": {
     "nativescript-cardview": "../",
-    "tns-android": "3.4.1",
     "tns-core-modules": "^3.4.0"
   },
   "devDependencies": {
