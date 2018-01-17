@@ -1,7 +1,8 @@
 {
   "name": "nativescript-cardview",
-  "version": "2.0.4",
-  "description": "A NativeScript plugin for Material Design CardView component.",
+  "version": "2.0.5",
+  "description":
+    "A NativeScript plugin for Material Design CardView component.",
   "main": "cardview",
   "typings": "index.d.ts",
   "nativescript": {
@@ -15,15 +16,13 @@
     "demo.ios": "npm run preparedemo; cd demo; tns run ios",
     "debug.ios": "npm run preparedemo; cd demo; tns debug ios",
     "demo.android": "npm run preparedemo; cd demo; tns run android",
-    "preparedemo": "npm run build; cd demo; tns plugin remove nativescript-cardview; tns plugin add ..",
+    "preparedemo":
+      "npm run build; cd demo; tns plugin remove nativescript-cardview; tns plugin add ..",
     "setup": "npm i && npm run build && cd demo && tns plugin add .. && cd ..",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.ts": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.ts": ["prettier --write", "git add"]
   },
   "repository": {
     "type": "git",
@@ -86,14 +85,14 @@
   "bugs": "https://github.com/bradmartin/nativescript-cardview/issues",
   "homepage": "https://github.com/bradmartin/nativescript-cardview",
   "peerDependencies": {
-    "tns-core-modules": "~3.3.0"
+    "tns-core-modules": "^3.3.0"
   },
   "devDependencies": {
     "husky": "^0.13.4",
     "lint-staged": "^3.6.1",
-    "prettier": "^1.4.4",
-    "tns-core-modules": "^3.2.0",
-    "tns-platform-declarations": "~3.2.0",
-    "typescript": "2.5.2"
+    "prettier": "^1.10.2",
+    "tns-core-modules": "^3.4.0",
+    "tns-platform-declarations": "~3.4.0",
+    "typescript": "2.6.2"
   }
 }
