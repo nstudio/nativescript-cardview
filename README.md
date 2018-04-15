@@ -1,19 +1,35 @@
-﻿<p align="center">
+﻿<a align="center" href="https://www.npmjs.com/package/nativescript-gif">
+    <h3>NativeScript CardView</h3>
+</a>
+<h4 align="center">A NativeScript plugin to provide an XML widget to implement the Material Design CardView component.</h4>
+
 <p align="center">
-
-[![npm](https://img.shields.io/npm/v/nativescript-cardview.svg)](https://www.npmjs.com/package/nativescript-cardview)
-[![npm](https://img.shields.io/npm/dt/nativescript-cardview.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-cardview)
-[![nStudio Plugin](https://img.shields.io/badge/nStudio-Plugin-blue.svg)](http://nstudio.io)
-
-# NativeScript CardView :diamonds: :clubs:
-
-A NativeScript plugin to provide an XML widget to implement the Material Design CardView component.
-
+    <a href="https://www.npmjs.com/package/nativescript-cardview">
+        <img src="https://img.shields.io/npm/v/nativescript-cardview.svg" alt="npm">
+    </a>
+    <a href="https://www.npmjs.com/package/nativescript-cardview">
+        <img src="https://img.shields.io/npm/dt/nativescript-cardview.svg?label=npm%20downloads" alt="npm">
+    </a>
+    <a href="https://github.com/bradmartin/nativescript-cardview/stargazers">
+        <img src="https://img.shields.io/github/stars/bradmartin/nativescript-cardview.svg" alt="stars">
+    </a>
+     <a href="https://github.com/bradmartin/nativescript-cardview/network">
+        <img src="https://img.shields.io/github/forks/bradmartin/nativescript-cardview.svg" alt="forks">
+    </a>
+    <a href="https://github.com/bradmartin/nativescript-cardview/blob/master/LICENSE">
+        <img src="https://img.shields.io/github/license/bradmartin/nativescript-cardview.svg" alt="license">
+    </a>
+    <a href="https://paypal.me/bradwayne88">
+        <img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="donate">
+    </a>
+    <a href="http://nstudio.io">
+      <img src="./images/nstudio-banner.png" alt="nStudio banner">
+    </a>
+    <h5 align="center">Do you need assistance on your project or plugin? Contact the nStudio team anytime at <a href="mailto:team@nstudio.io">team@nstudio.io</a> to get up to speed with the best practices in mobile and web app development.
+    </h5>
 </p>
 
-##### [Material Design Card Spec](https://www.google.com/design/spec/components/cards.html)
-
-##### [CardView Android Documentation](http://developer.android.com/intl/zh-tw/reference/android/support/v7/widget/CardView.html)
+---
 
 ## Installation
 
@@ -31,7 +47,15 @@ A NativeScript plugin to provide an XML widget to implement the Material Design 
 
 Be sure to run a new build after adding plugins to avoid any issues. Here is a post with some details: [Plugin Not Working after adding to project.](https://bradmartin.net/2016/07/20/ahhh-this-nativescript-plugin-doesnt-work/_)
 
-## Vanilla NativeScript
+---
+
+##### [Material Design Card Spec](https://www.google.com/design/spec/components/cards.html)
+
+##### [CardView Android Documentation](http://developer.android.com/intl/zh-tw/reference/android/support/v7/widget/CardView.html)
+
+### Usage
+
+## Plain NativeScript
 
 <span style="color:red">IMPORTANT: </span>_Make sure you include `xmlns:Card="nativescript-cardview"` on the Page element_
 
@@ -64,11 +88,12 @@ Be sure to run a new build after adding plugins to avoid any issues. Here is a p
 ## Angular NativeScript
 
 ```TS
-import * as elementRegistryModule from 'nativescript-angular/element-registry';
-elementRegistryModule.registerElement("CardView", () => require("nativescript-cardview").CardView);
+import { registerElement } from 'nativescript-angular/element-registry';
+import { CardView } from 'nativescript-cardview';
+registerElement("CardView", () => CardView);
 ```
 
-```XML
+```html
 <CardView class="cardStyle" margin="10" elevation="40" radius="1" >
 	<GridLayout rows="10,30,30,250, auto, auto,10" columns="10,40, *, 30,10">
 		<Image src="res://profile" stretch="aspectFit" verticalAlignment="stretch" col="1" row="1" rowSpan="2"></Image>
