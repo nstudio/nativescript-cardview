@@ -1,4 +1,4 @@
-﻿<a align="center" href="https://www.npmjs.com/package/nativescript-gif">
+﻿<a align="center" href="https://www.npmjs.com/package/nativescript-cardview">
     <h3>NativeScript CardView</h3>
 </a>
 <h4 align="center">A NativeScript plugin to provide an XML widget to implement the Material Design CardView component.</h4>
@@ -16,7 +16,7 @@
      <a href="https://github.com/bradmartin/nativescript-cardview/network">
         <img src="https://img.shields.io/github/forks/bradmartin/nativescript-cardview.svg" alt="forks">
     </a>
-    <a href="https://github.com/bradmartin/nativescript-cardview/blob/master/LICENSE">
+    <a href="https://github.com/bradmartin/nativescript-cardview/blob/master/src/LICENSE.md">
         <img src="https://img.shields.io/github/license/bradmartin/nativescript-cardview.svg" alt="license">
     </a>
     <a href="https://paypal.me/bradwayne88">
