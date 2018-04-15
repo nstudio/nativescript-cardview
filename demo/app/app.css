@@ -1,80 +1,80 @@
 ﻿.Material {
-    font-family: MaterialIcons-Regular, Material Icons;
+  font-family: MaterialIcons-Regular, Material Icons;
 }
 
 button {
-    font-family: 'Roboto', Roboto;
+  font-family: 'Roboto', Roboto;
 }
 
 .align-center {
-    vertical-align: center;
-    horizontal-align: center;
+  vertical-align: center;
+  horizontal-align: center;
 }
 
 .title {
-    font-size: 30;
-    margin: 4;
+  font-size: 30;
+  margin: 4;
 }
 
 .subtitle {
-    font-size: 24;
+  font-size: 24;
 }
 
 .info {
-    font-size: 20;
-    margin:4;
+  font-size: 20;
+  margin: 4;
 }
 
 .size16 {
-    font-size: 16;
-    margin: 2;
+  font-size: 16;
+  margin: 2;
 }
 
 .clear-btn {
-    background-color: white;
-    padding:5px;
+  background-color: white;
+  padding: 5px;
 }
 
 .blue {
-    color: #6A78C5;
+  color: #6a78c5;
 }
 
 .gray {
-    color: #666;
+  color: #666;
 }
 
 .white {
-    color: #fff;
+  color: #fff;
 }
 
 .avatar-circle {
-    font-size:35;
-    height: 50;
-    width: 50;
-    color: #fff;
-    background-color: #FF4081;
-    border-radius: 25;
-    margin-left: 16;
-    margin-top: 5; 
-    horizontal-align: center;
-    vertical-align: center;
-    text-align: center;
+  font-size: 35;
+  height: 50;
+  width: 50;
+  color: #fff;
+  background-color: #ff4081;
+  border-radius: 25;
+  margin-left: 16;
+  margin-top: 5;
+  horizontal-align: center;
+  vertical-align: center;
+  text-align: center;
 }
 
 .blackCard {
-    background-color: #333;
-    color: white;
+  background-color: #333;
+  color: white;
 }
 
 .blueCard {
-    background-color: #3489db;
-    color: white;
+  background-color: #3489db;
+  color: white;
 }
 
 .jokerCard {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 .whiteCard {
-    background-color:#fff;
+  background-color: #fff;
 }

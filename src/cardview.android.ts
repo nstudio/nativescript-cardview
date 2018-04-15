@@ -1,16 +1,17 @@
-import { Color } from "tns-core-modules/color";
+import { Color } from 'tns-core-modules/color';
 import {
   backgroundColorProperty,
   backgroundInternalProperty,
   CardViewCommon,
   elevationProperty,
   radiusProperty
-} from "./cardview-common";
+} from './cardview-common';
 
 declare var android: any;
 
 export class CardView extends CardViewCommon {
   private _androidViewId: number;
+  public nativeView;
 
   get android(): any {
     return this.nativeView;
@@ -36,12 +37,10 @@ export class CardView extends CardViewCommon {
   [backgroundColorProperty.setNative](value: Color) {
     if (value) {
       try {
-        this.nativeView.setCardBackgroundColor(
-          value !== undefined ? value.android : new Color("#FFFFFF").android
-        );
+        this.nativeView.setCardBackgroundColor(value !== undefined ? value.android : new Color('#FFFFFF').android);
       } catch (error) {
         // do nothing, catch bad color value
-        console.log("bad background-color value:", error);
+        console.log('invalid background-color value:', error);
       }
     }
   }
@@ -50,12 +49,11 @@ export class CardView extends CardViewCommon {
     if (value) {
       try {
         this.nativeView.setCardBackgroundColor(
-          new Color(value.color !== undefined ? value.color + "" : "#FFFFFF")
-            .android
+          new Color(value.color !== undefined ? value.color + '' : '#FFFFFF').android
         );
       } catch (error) {
         // do nothing, catch bad color value
-        console.log("bad background-color value:", error);
+        console.log('invalid background-color value:', error);
       }
     }
   }

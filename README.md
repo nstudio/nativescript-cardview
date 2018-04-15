@@ -1,37 +1,49 @@
-﻿[![nStudio Plugin](https://img.shields.io/badge/nStudio-Plugin-blue.svg)](http://nstudio.io)
+﻿<p align="center">
+<p align="center">
+
 [![npm](https://img.shields.io/npm/v/nativescript-cardview.svg)](https://www.npmjs.com/package/nativescript-cardview)
 [![npm](https://img.shields.io/npm/dt/nativescript-cardview.svg?label=npm%20downloads)](https://www.npmjs.com/package/nativescript-cardview)
+[![nStudio Plugin](https://img.shields.io/badge/nStudio-Plugin-blue.svg)](http://nstudio.io)
 
 # NativeScript CardView :diamonds: :clubs:
 
 A NativeScript plugin to provide an XML widget to implement the Material Design CardView component.
 
-##### [Material Design Card Spec](https://www.google.com/design/spec/components/cards.html)
-##### [CardView Android Documentation](http://developer.android.com/intl/zh-tw/reference/android/support/v7/widget/CardView.html)
+</p>
 
+##### [Material Design Card Spec](https://www.google.com/design/spec/components/cards.html)
+
+##### [CardView Android Documentation](http://developer.android.com/intl/zh-tw/reference/android/support/v7/widget/CardView.html)
 
 ## Installation
 
+##### NativeScript 4x
+
+* `tns plugin add nativescript-cardview`
+
+##### NativeScript 3x
+
+* `tns plugin add nativescript-cardview@2.0.5`
+
 ##### NativeScript 2.x
-- `tns plugin add nativescript-cardview@^1.3.2`
 
-##### NativeScript 3+
-- `tns plugin add nativescript-cardview`
+* `tns plugin add nativescript-cardview@1.3.2`
 
-*Be sure to run a new build after adding plugins to avoid any issues. Here is a post with some details: https://bradmartin.net/2016/07/20/ahhh-this-nativescript-plugin-doesnt-work/*
-  
+Be sure to run a new build after adding plugins to avoid any issues. Here is a post with some details: [Plugin Not Working after adding to project.](https://bradmartin.net/2016/07/20/ahhh-this-nativescript-plugin-doesnt-work/_)
+
 ## Vanilla NativeScript
 
- <span style="color:red">IMPORTANT: </span>*Make sure you include `xmlns:Card="nativescript-cardview"` on the Page element*
+<span style="color:red">IMPORTANT: </span>_Make sure you include `xmlns:Card="nativescript-cardview"` on the Page element_
 
 ### XML
+
 ```XML
 <Page xmlns:Card="nativescript-cardview">
-   <StackLayout>     
+   <StackLayout>
       <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
            <grid-layout rows="200, auto, auto" columns="auto, auto, *">
                <image src="~/images/batman.jpg" stretch="aspectFill" colSpan="3" row="0" />
-               <label text="Batman wants to be friends?" class="info" textWrap="true" row="1" colSpan="3" />          
+               <label text="Batman wants to be friends?" class="info" textWrap="true" row="1" colSpan="3" />
                <button text="DECLINE" tap="goAway" row="2" col="0" />
                <button text="ACCEPT" row="2" col="1" />
            </grid-layout>
@@ -41,13 +53,13 @@ A NativeScript plugin to provide an XML widget to implement the Material Design 
 ```
 
 ### CSS
+
 ```CSS
 .cardStyle {
     background-color: #3489db;
     color: #fff;
 }
 ```
-
 
 ## Angular NativeScript
 
@@ -71,7 +83,7 @@ elementRegistryModule.registerElement("CardView", () => require("nativescript-ca
 
 ## Attributes
 
-* **radius** *optional*
+* **radius** _optional_
 
 An attribute to control the 'border-radius' of the card.
 
@@ -79,35 +91,36 @@ An attribute to control the 'border-radius' of the card.
 
 #### Android
 
-* **elevation** *optional*
+* **elevation** _optional_
 
- An attribute to set the elevation of the card. This will increase the 'drop-shadow' of the card.
+An attribute to set the elevation of the card. This will increase the 'drop-shadow' of the card.
 There can be some performance impact when using a very high elevation value.
 
 #### iOS
 
-* **shadowOffsetWidth** *optional*
+* **shadowOffsetWidth** _optional_
 
 An attribute to offset the x position of the shadow behind the card.
- 
-* **shadowOffsetHeight** *optional*
+
+* **shadowOffsetHeight** _optional_
 
 An attribute to offset the y position of the shadow behind the card.
 
-* **shadowColor** *optional*
+* **shadowColor** _optional_
 
 An attribute to set the color of the shadow behind the card.
 
-* **shadowOpacity** *optional*
+* **shadowOpacity** _optional_
 
 An attribute to set the opacity of the shadow behind the card.
 
-* **shadowRadius** *optional*
+* **shadowRadius** _optional_
 
 An attribute to set the radius of the shadow (shadow spread) behind the card.
 
 The default values are set to:
-``` 
+
+```
 radius = 2;
 shadowOffsetWidth = 0;
 shadowOffsetHeight = 2;
@@ -120,33 +133,32 @@ shadowRadius = 1;
 
 #### Android
 
-Sample 1 |  Sample 2
--------- | ---------
-![Sample1](images/sample_card1.png) | ![Sample2](images/sample_card2.png)
-
+| Sample 1                            | Sample 2                            |
+| ----------------------------------- | ----------------------------------- |
+| ![Sample1](images/sample_card1.png) | ![Sample2](images/sample_card2.png) |
 
 #### iOS
 
-Sample 1 |  Sample 2
--------- | ---------
-![Sample1](images/sample_card1_ios.png) | ![Sample2](images/sample_card3_ios.png)
-
+| Sample 1                                | Sample 2                                |
+| --------------------------------------- | --------------------------------------- |
+| ![Sample1](images/sample_card1_ios.png) | ![Sample2](images/sample_card3_ios.png) |
 
 #### Contributing
+
 [Please follow here](https://github.com/bradmartin/nativescript-cardview/blob/master/CONTRIBUTING.md)
 
 #### Contributors
 
-[<img alt="bradmartin" src="https://avatars3.githubusercontent.com/u/6006148?v=3&s=117" width="117">](https://github.com/bradmartin) |[<img alt="NathanWalker" src="https://avatars1.githubusercontent.com/u/457187?v=3&s=117" width="117">](https://github.com/NathanWalker) |[<img alt="manijak" src="https://avatars3.githubusercontent.com/u/3605066?v=3&s=117" width="117">](https://github.com/manijak) |[<img alt="NathanaelA" src="https://avatars0.githubusercontent.com/u/850871?v=3&s=117" width="117">](https://github.com/NathanaelA) |[<img alt="EddyVerbruggen" src="https://avatars2.githubusercontent.com/u/1426370?v=3&s=117" width="117">](https://github.com/EddyVerbruggen) |[<img alt="sis0k0" src="https://avatars1.githubusercontent.com/u/7893485?v=3&s=117" width="117">](https://github.com/sis0k0) |
-:---: |:---: |:---: |:---: |:---: |:---: |
-[bradmartin](https://github.com/bradmartin) |[NathanWalker](https://github.com/NathanWalker) |[manijak](https://github.com/manijak) |[NathanaelA](https://github.com/NathanaelA) |[EddyVerbruggen](https://github.com/EddyVerbruggen) |[sis0k0](https://github.com/sis0k0) |
+| [<img alt="bradmartin" src="https://avatars3.githubusercontent.com/u/6006148?v=3&s=117" width="117">](https://github.com/bradmartin) | [<img alt="NathanWalker" src="https://avatars1.githubusercontent.com/u/457187?v=3&s=117" width="117">](https://github.com/NathanWalker) | [<img alt="manijak" src="https://avatars3.githubusercontent.com/u/3605066?v=3&s=117" width="117">](https://github.com/manijak) | [<img alt="NathanaelA" src="https://avatars0.githubusercontent.com/u/850871?v=3&s=117" width="117">](https://github.com/NathanaelA) | [<img alt="EddyVerbruggen" src="https://avatars2.githubusercontent.com/u/1426370?v=3&s=117" width="117">](https://github.com/EddyVerbruggen) | [<img alt="sis0k0" src="https://avatars1.githubusercontent.com/u/7893485?v=3&s=117" width="117">](https://github.com/sis0k0) |
+| :----------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: |
+|                                             [bradmartin](https://github.com/bradmartin)                                              |                                             [NathanWalker](https://github.com/NathanWalker)                                             |                                             [manijak](https://github.com/manijak)                                              |                                             [NathanaelA](https://github.com/NathanaelA)                                             |                                             [EddyVerbruggen](https://github.com/EddyVerbruggen)                                              |                                             [sis0k0](https://github.com/sis0k0)                                              |
 
-[<img alt="vladimirnani" src="https://avatars0.githubusercontent.com/u/3397077?v=3&s=117" width="117">](https://github.com/vladimirnani) |[<img alt="DickSmith" src="https://avatars0.githubusercontent.com/u/6675511?v=3&s=117" width="117">](https://github.com/DickSmith) |
-:---: |:---: |
-[vladimirnani](https://github.com/vladimirnani) |[DickSmith](https://github.com/DickSmith) |
-
+| [<img alt="vladimirnani" src="https://avatars0.githubusercontent.com/u/3397077?v=3&s=117" width="117">](https://github.com/vladimirnani) | [<img alt="DickSmith" src="https://avatars0.githubusercontent.com/u/6675511?v=3&s=117" width="117">](https://github.com/DickSmith) |
+| :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
+|                                             [vladimirnani](https://github.com/vladimirnani)                                              |                                             [DickSmith](https://github.com/DickSmith)                                              |
 
 ## [nStudio, LLC](http://nstudio.io)
-[![nStudio](./images/nstudio-banner.png "nStudio")](http://nStudio.io)
 
-Do you need assistance on your project or plugin? Contact the nStudio team anytime at <team@nstudio.io> to get up to speed with the best practices in mobile and web app development.
+[![nStudio](./images/nstudio-banner.png 'nStudio')](http://nStudio.io)
+
+Do you need assistance on your project or plugin? Contact the nStudio team anytime at <mailto:team@nstudio.io> to get up to speed with the best practices in mobile and web app development.
