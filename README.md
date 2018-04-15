@@ -1,5 +1,5 @@
 ﻿<a align="center" href="https://www.npmjs.com/package/nativescript-cardview">
-    <h3>NativeScript CardView</h3>
+    <h3 align="center">NativeScript CardView</h3>
 </a>
 <h4 align="center">A NativeScript plugin to provide an XML widget to implement the Material Design CardView component.</h4>
 
