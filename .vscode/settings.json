@@ -1,0 +1,9 @@
+{
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/platforms/**": true,
+        "**/hooks/**": true,
+        "**/node_modules/**": true
+    }
+}

@@ -3,6 +3,8 @@
 .vs/
 demo/
 screenshots/
+node_modules/
+scripts/
 images/
 .sln
 *.sln
@@ -14,3 +16,12 @@ README.md
 *.map
 tsconfig.json
 *.log
+
+*.map
+*.ts
+!*.d.ts
+tsconfig.json
+platforms/android/*
+!platforms/android/include.gradle
+!platforms/android/*.aar
+!platforms/android/*.jar

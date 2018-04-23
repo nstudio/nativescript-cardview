@@ -1,3 +1,5 @@
+/// <reference path="./node_modules/tns-platform-declarations/android.d.ts" />
+
 import { Color } from 'tns-core-modules/color';
 import {
   backgroundColorProperty,
@@ -6,8 +8,6 @@ import {
   elevationProperty,
   radiusProperty
 } from './cardview-common';
-
-declare var android: any;
 
 export class CardView extends CardViewCommon {
   private _androidViewId: number;
@@ -26,7 +26,7 @@ export class CardView extends CardViewCommon {
   }
 
   public createNativeView() {
-    return new android.support.v7.widget.CardView(this._context);
+    return new (android.support.v7.widget as any).CardView(this._context);
   }
 
   public initNativeView() {

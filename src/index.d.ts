@@ -1,4 +1,4 @@
-import { ContentView } from "ui/content-view";
+import { ContentView } from 'tns-core-modules/ui/content-view';
 
 /**
  * Contains the CardView class, which represents a card view component.

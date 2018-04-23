@@ -1,15 +1,6 @@
-import { Color } from "tns-core-modules/color";
-import { ContentView } from "tns-core-modules/ui/content-view";
-import {
-  backgroundColorProperty,
-  backgroundInternalProperty,
-  Property
-} from "tns-core-modules/ui/core/view";
-
-export {
-  backgroundColorProperty,
-  backgroundInternalProperty
-} from "tns-core-modules/ui/core/view";
+import { Color } from 'tns-core-modules/color';
+import { ContentView, Property } from 'tns-core-modules/ui/content-view';
+export { backgroundColorProperty, backgroundInternalProperty } from 'tns-core-modules/ui/core/view';
 
 /**
  * Contains the CardView class, which represents a card view component.
@@ -62,43 +53,43 @@ export class CardViewCommon extends ContentView {
 }
 
 export const radiusProperty = new Property<CardViewCommon, number>({
-  name: "radius",
+  name: 'radius',
   valueConverter: value => +value
 });
 radiusProperty.register(CardViewCommon);
 
 export const elevationProperty = new Property<CardViewCommon, number>({
-  name: "elevation",
+  name: 'elevation',
   valueConverter: value => +value
 });
 elevationProperty.register(CardViewCommon);
 
 export const shadowRadiusProperty = new Property<CardViewCommon, number>({
-  name: "shadowRadius",
+  name: 'shadowRadius',
   valueConverter: value => +value
 });
 shadowRadiusProperty.register(CardViewCommon);
 
 export const shadowOffsetWidthProperty = new Property<CardViewCommon, number>({
-  name: "shadowOffsetWidth",
+  name: 'shadowOffsetWidth',
   valueConverter: value => +value
 });
 shadowOffsetWidthProperty.register(CardViewCommon);
 
 export const shadowOffsetHeightProperty = new Property<CardViewCommon, number>({
-  name: "shadowOffsetHeight",
+  name: 'shadowOffsetHeight',
   valueConverter: value => +value
 });
 shadowOffsetHeightProperty.register(CardViewCommon);
 
 export const shadowColorProperty = new Property<CardViewCommon, Color>({
-  name: "shadowColor",
+  name: 'shadowColor',
   valueConverter: value => new Color(value)
 });
 shadowColorProperty.register(CardViewCommon);
 
 export const shadowOpacityProperty = new Property<CardViewCommon, number>({
-  name: "shadowOpacity",
+  name: 'shadowOpacity',
   valueConverter: value => +value
 });
 shadowOpacityProperty.register(CardViewCommon);

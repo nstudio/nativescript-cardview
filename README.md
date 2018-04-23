@@ -55,6 +55,8 @@ Be sure to run a new build after adding plugins to avoid any issues. Here is a p
 
 ### Usage
 
+_iOS note: Setting a background-color will help if you do not see the card on the page._
+
 ## Plain NativeScript
 
 <span style="color:red">IMPORTANT: </span>_Make sure you include `xmlns:Card="nativescript-cardview"` on the Page element_
@@ -85,12 +87,12 @@ Be sure to run a new build after adding plugins to avoid any issues. Here is a p
 }
 ```
 
-## Angular NativeScript
+## NativeScript + Angular
 
-```TS
+```typescript
 import { registerElement } from 'nativescript-angular/element-registry';
 import { CardView } from 'nativescript-cardview';
-registerElement("CardView", () => CardView);
+registerElement('CardView', () => CardView);
 ```
 
 ```html
@@ -168,10 +170,6 @@ shadowRadius = 1;
 | --------------------------------------- | --------------------------------------- |
 | ![Sample1](images/sample_card1_ios.png) | ![Sample2](images/sample_card3_ios.png) |
 
-#### Contributing
-
-[Please follow here](https://github.com/bradmartin/nativescript-cardview/blob/master/CONTRIBUTING.md)
-
 #### Contributors
 
 | [<img alt="bradmartin" src="https://avatars3.githubusercontent.com/u/6006148?v=3&s=117" width="117">](https://github.com/bradmartin) | [<img alt="NathanWalker" src="https://avatars1.githubusercontent.com/u/457187?v=3&s=117" width="117">](https://github.com/NathanWalker) | [<img alt="manijak" src="https://avatars3.githubusercontent.com/u/3605066?v=3&s=117" width="117">](https://github.com/manijak) | [<img alt="NathanaelA" src="https://avatars0.githubusercontent.com/u/850871?v=3&s=117" width="117">](https://github.com/NathanaelA) | [<img alt="EddyVerbruggen" src="https://avatars2.githubusercontent.com/u/1426370?v=3&s=117" width="117">](https://github.com/EddyVerbruggen) | [<img alt="sis0k0" src="https://avatars1.githubusercontent.com/u/7893485?v=3&s=117" width="117">](https://github.com/sis0k0) |
@@ -181,9 +179,3 @@ shadowRadius = 1;
 | [<img alt="vladimirnani" src="https://avatars0.githubusercontent.com/u/3397077?v=3&s=117" width="117">](https://github.com/vladimirnani) | [<img alt="DickSmith" src="https://avatars0.githubusercontent.com/u/6675511?v=3&s=117" width="117">](https://github.com/DickSmith) |
 | :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
 |                                             [vladimirnani](https://github.com/vladimirnani)                                              |                                             [DickSmith](https://github.com/DickSmith)                                              |
-
-## [nStudio, LLC](http://nstudio.io)
-
-[![nStudio](./images/nstudio-banner.png 'nStudio')](http://nStudio.io)
-
-Do you need assistance on your project or plugin? Contact the nStudio team anytime at <mailto:team@nstudio.io> to get up to speed with the best practices in mobile and web app development.

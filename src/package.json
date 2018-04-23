@@ -1,6 +1,6 @@
 {
   "name": "nativescript-cardview",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A NativeScript plugin for Material Design CardView component.",
   "main": "cardview",
   "typings": "index.d.ts",
@@ -12,7 +12,8 @@
   },
   "scripts": {
     "tsc": "tsc -skipLibCheck",
-    "build": "npm i && tsc",
+    "build": "npm i && tsc && npm run build.native",
+    "build.native": "node scripts/build-native.js",
     "postclone": "npm i && node scripts/postclone.js && cd ../demo && npm i && cd ../src && npm run plugin.link",
     "test.android":
       "npm i && npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
@@ -27,7 +28,7 @@
     "clean":
       "cd ../demo && rimraf hooks node_modules platforms && cd ../src && rimraf node_modules && npm run plugin.link",
     "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",
-    "prepare": "node scripts/prepare.js"
+    "prepack": "npm run build.native"
   },
   "lint-staged": {
     "*.ts": ["prettier --write", "git add"]
@@ -86,14 +87,11 @@
   "homepage": "https://github.com/bradmartin/nativescript-cardview",
   "readme": "README.md",
   "readmeFilename": "README.md",
-  "peerDependencies": {
-    "tns-core-modules": "^3.3.0"
-  },
   "devDependencies": {
-    "husky": "^0.13.4",
-    "lint-staged": "^3.6.1",
-    "prettier": "^1.12.0",
-    "tns-core-modules": "^3.4.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.4",
+    "prettier": "^1.12.1",
+    "tns-core-modules": "^4.0.0",
     "tns-platform-declarations": "~3.4.0",
     "typescript": "2.6.2",
     "prompt": "^1.0.0",

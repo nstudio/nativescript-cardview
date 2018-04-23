@@ -1,16 +1,15 @@
-<page xmlns="http://schemas.nativescript.org/tns.xsd" 
-      xmlns:Card="nativescript-cardview" 
-      loaded="pageLoaded">
-      
+<page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" 
+    xmlns:Card="nativescript-cardview" loaded="pageLoaded">
     <action-bar title="CardView" backgroundColor="#009688" color="#fff" />
     <scroll-view>
         <stack-layout>
-            <Card:CardView class="blackCard" radius="10" loaded="cardLoaded" elevation="20" margin="10" id="batCard">
-                <grid-layout rows="200, auto, auto" columns="auto, auto, *">
-                    <image src="~/images/batman.jpg" stretch="aspectFill" margin="10" colSpan="3" row="0" />
-                    <label text="Batman wants to be friends?" class="info" textWrap="true" row="1" colSpan="3" />
-                    <button text="DECLINE" tap="{{ goAway }}" class="blue" row="2" col="0" />
-                    <button text="ACCEPT" class="blue" row="2" col="1" />
+            <Card:CardView margin="5" loaded="{{ cardLoaded }}" id="batCard" class="whiteCard">
+                <grid-layout rows="200, auto, auto" columns="*, *">
+                    <image src="~/images/batman.jpg" stretch="aspectFill" margin="10" colSpan="2" row="0" />
+                    <label text="Batman wants to be friends?" class="info" textWrap="true" row="1" colSpan="2" />
+                    <button text="Decline" tap="{{ goAway }}" class="blue" row="2" col="0" />
+                    <button text="Accept" tap="{{ goAway }}" class="blue" row="2" col="1" />
                 </grid-layout>
             </Card:CardView>
             <grid-layout rows="*" columns="*, *">

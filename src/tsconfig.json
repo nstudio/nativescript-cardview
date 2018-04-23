@@ -18,7 +18,7 @@
     "lib": ["es6", "dom"],
     "baseUrl": ".",
     "paths": {
-      "*": ["./node_modules/tns-core-modules/*", "./node_modules/*"]
+      "*": ["./node_modules/tns-core-modules/*", "./node_modules/*", "demo/node_modules", "platforms"]
     }
   },
   "files": ["cardview-common.ts", "cardview.android.ts", "cardview.ios.ts"],

@@ -1,3 +1,5 @@
+/// <reference path="./node_modules/tns-platform-declarations/ios.d.ts" />
+
 import { Color } from 'tns-core-modules/color';
 import { screen } from 'tns-core-modules/platform';
 import {
@@ -12,15 +14,13 @@ import {
   shadowRadiusProperty
 } from './cardview-common';
 
-declare var UIView: any, CGRectMake: any, CGSizeMake: any;
-
 export class CardView extends CardViewCommon {
-  public nativeView;
+  public nativeView: UIView;
 
   constructor() {
     super();
-    let width = screen.mainScreen.widthDIPs - 20;
-    this.nativeView = new UIView(CGRectMake(10, 30, width, 0));
+    const width = screen.mainScreen.widthDIPs - 20;
+    this.nativeView = new UIView({ frame: CGRectMake(10, 30, width, 0) });
     this.nativeView.layer.masksToBounds = false;
     this.shadowColor = 'black';
     this.radius = 1;
