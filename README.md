@@ -123,6 +123,11 @@ An attribute to control the 'border-radius' of the card.
 An attribute to set the elevation of the card. This will increase the 'drop-shadow' of the card.
 There can be some performance impact when using a very high elevation value.
 
+* **ripple** _optional_
+
+Set to 'true' to show a ripple when the card is tapped. Tap event handlers in the card content will prevent the ripple.
+
+
 #### iOS
 
 * **shadowOffsetWidth** _optional_
