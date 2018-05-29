@@ -50,6 +50,11 @@ export class CardViewCommon extends ContentView {
    * Set the shadow opacity of the card view. ** Valid only when running on iOS **
    */
   shadowOpacity: number;
+
+  /**
+   * Gets or set the ripple setting.
+   */
+  ripple: boolean;
 }
 
 export const radiusProperty = new Property<CardViewCommon, number>({
@@ -63,6 +68,12 @@ export const elevationProperty = new Property<CardViewCommon, number>({
   valueConverter: value => +value
 });
 elevationProperty.register(CardViewCommon);
+
+export const rippleProperty = new Property<CardViewCommon, boolean>({
+  name: 'ripple',
+  valueConverter: value => value == "true"
+});
+rippleProperty.register(CardViewCommon);
 
 export const shadowRadiusProperty = new Property<CardViewCommon, number>({
   name: 'shadowRadius',

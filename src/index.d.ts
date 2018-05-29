@@ -48,4 +48,9 @@ export class CardView extends ContentView {
    * Set the shadow opacity of the card view. ** Valid only when running on iOS **
    */
   shadowOpacity: number;
+
+  /**
+   * Gets or set the ripple setting.
+   */
+  ripple: boolean;
 }
