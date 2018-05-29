@@ -1,15 +1,8 @@
 /// <reference path="./node_modules/tns-platform-declarations/android.d.ts" />
 
+import * as application from 'tns-core-modules/application';
 import { Color } from 'tns-core-modules/color';
-var application = require("tns-core-modules/application");
-import {
-  backgroundColorProperty,
-  backgroundInternalProperty,
-  CardViewCommon,
-  elevationProperty,
-  radiusProperty,
-  rippleProperty
-} from './cardview-common';
+import { CardViewCommon, backgroundColorProperty, backgroundInternalProperty, elevationProperty, radiusProperty, rippleProperty } from './cardview-common';
 
 export class CardView extends CardViewCommon {
   private _androidViewId: number;
@@ -28,28 +21,26 @@ export class CardView extends CardViewCommon {
   }
 
   [rippleProperty.setNative](value: boolean) {
+    if (!value) {
+      this.nativeView.setClickable(false);
+    } else {
+      const attr = java.lang.Class.forName('android.support.v7.appcompat.R$attr');
+      const field = attr.getField('selectableItemBackground');
 
-    if( !value ){
-      this.nativeView.setClickable(false); 
-    } else { 
-      let attr = java.lang.Class.forName("android.support.v7.appcompat.R$attr");
-      let field = attr.getField("selectableItemBackground");
-      
-      if( field ) {
-        let resId = field.getInt(null);
+      if (field) {
+        const resId = field.getInt(null);
 
-        let attrs =  Array.create("int", 1);
-        attrs[0] = resId
-        let activity = application.android.foregroundActivity;
-        let typedValue = activity.obtainStyledAttributes(attrs);
-        let selectedItemDrawable = typedValue.getDrawable(0);
+        const attrs = Array.create('int', 1);
+        attrs[0] = resId;
+        const activity = application.android.foregroundActivity;
+        const typedValue = activity.obtainStyledAttributes(attrs);
+        const selectedItemDrawable = typedValue.getDrawable(0);
 
         this.nativeView.setForeground(selectedItemDrawable);
-        this.nativeView.setClickable(true);  
+        this.nativeView.setClickable(true);
       }
     }
-  } 
-
+  }
 
   public createNativeView() {
     return new (android.support.v7.widget as any).CardView(this._context);
@@ -66,7 +57,7 @@ export class CardView extends CardViewCommon {
         this.nativeView.setCardBackgroundColor(value !== undefined ? value.android : new Color('#FFFFFF').android);
       } catch (error) {
         // do nothing, catch bad color value
-        console.log('invalid background-color value:', error);
+        console.log('NativeScript-Cardview --- invalid background-color value ', error);
       }
     }
   }
@@ -79,7 +70,7 @@ export class CardView extends CardViewCommon {
         );
       } catch (error) {
         // do nothing, catch bad color value
-        console.log('invalid background-color value:', error);
+        console.log('NativeScript-Cardview --- invalid background-color value:', error);
       }
     }
   }

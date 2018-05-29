@@ -20,37 +20,37 @@ export class CardView extends ContentView {
   radius: number;
 
   /**
-   * Gets or set the elevation of the card view.  ** Valid only when running on Android OS **
+   * Gets or set the elevation of the card view.  ** Android Only **
    */
   elevation: number;
 
   /**
-   * Gets or set the shadow radius of the card view.  ** Valid only when running on iOS **
+   * Gets or set the shadow radius of the card view.  ** iOS Only **
    */
   shadowRadius: number;
 
   /**
-   * Set the shadow offset width of the card view. ** Valid only when running on iOS **
+   * Set the shadow offset width of the card view.  ** iOS Only **
    */
   shadowOffsetWidth: number;
 
   /**
-   * Set the shadow offset height of the card view. ** Valid only when running on iOS **
+   * Set the shadow offset height of the card view. ** iOS Only **
    */
   shadowOffsetHeight: number;
 
   /**
-   * Set the shadow color of the card view. ** Valid only when running on iOS **
+   * Set the shadow color of the card view. ** iOS Only **
    */
   shadowColor: string;
 
   /**
-   * Set the shadow opacity of the card view. ** Valid only when running on iOS **
+   * Set the shadow opacity of the card view. ** iOS Only **
    */
   shadowOpacity: number;
 
   /**
-   * Gets or set the ripple setting.
+   * Gets or set the ripple setting. ** Android Only **
    */
   ripple: boolean;
 }

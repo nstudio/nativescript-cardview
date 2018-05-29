@@ -1,10 +1,10 @@
 {
   "nativescript": {
     "id": "org.nativescript.demo",
-    "tns-android": {
+    "tns-ios": {
       "version": "4.0.1"
     },
-    "tns-ios": {
+    "tns-android": {
       "version": "4.0.1"
     }
   },
