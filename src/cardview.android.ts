@@ -35,7 +35,7 @@ export class CardView extends CardViewCommon {
       let attr = java.lang.Class.forName("android.support.v7.appcompat.R$attr");
       let field = attr.getField("selectableItemBackground");
       
-      if( field ) {
+      if( field && android.os.Build.VERSION.SDK_INT >= 23  ) {
         let resId = field.getInt(null);
 
         let attrs =  Array.create("int", 1);
