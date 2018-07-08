@@ -15,8 +15,7 @@
     "build": "npm i && tsc && npm run build.native",
     "build.native": "node scripts/build-native.js",
     "postclone": "npm i && node scripts/postclone.js && cd ../demo && npm i && cd ../src && npm run plugin.link",
-    "test.android":
-      "npm i && npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
+    "test.android": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
     "test.ios": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build ios && tns test ios --justlaunch",
     "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
     "plugin.link": "npm link && cd ../demo && npm link nativescript-cardview && cd ../src",
@@ -25,19 +24,29 @@
     "demo.android": "npm i && npm run tsc && cd ../demo && tns run android --syncAllFiles",
     "demo.reset": "cd ../demo && rimraf platforms",
     "plugin.prepare": "npm run tsc && cd ../demo && tns plugin remove nativescript-cardview && tns plugin add ../src",
-    "clean":
-      "cd ../demo && rimraf hooks node_modules platforms && cd ../src && rimraf node_modules && npm run plugin.link",
+    "clean": "cd ../demo && rimraf hooks node_modules platforms && cd ../src && rimraf node_modules && npm run plugin.link",
     "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",
     "prepack": "npm run build.native"
   },
   "lint-staged": {
-    "*.ts": ["prettier --write", "git add"]
+    "*.ts": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/bradmartin/nativescript-cardview"
   },
-  "keywords": ["NativeScript", "TypeScript", "Card", "android", "ios", "CardView", "Material Design"],
+  "keywords": [
+    "NativeScript",
+    "TypeScript",
+    "Card",
+    "android",
+    "ios",
+    "CardView",
+    "Material Design"
+  ],
   "contributors": [
     {
       "name": "Nathanael Anderson",
@@ -90,10 +99,10 @@
   "devDependencies": {
     "husky": "^0.14.3",
     "lint-staged": "^7.0.4",
-    "prettier": "^1.12.1",
+    "prettier": "^1.13.2",
     "tns-core-modules": "^4.0.0",
     "tns-platform-declarations": "~3.4.0",
-    "typescript": "2.6.2",
+    "typescript": "2.8.3",
     "prompt": "^1.0.0",
     "rimraf": "^2.5.0",
     "tslint": "^5.0.0",

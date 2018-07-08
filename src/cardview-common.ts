@@ -71,7 +71,7 @@ elevationProperty.register(CardViewCommon);
 
 export const rippleProperty = new Property<CardViewCommon, boolean>({
   name: 'ripple',
-  valueConverter: value => value == "true"
+  valueConverter: value => value === 'true'
 });
 rippleProperty.register(CardViewCommon);
 

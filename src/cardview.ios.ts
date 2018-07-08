@@ -2,17 +2,7 @@
 
 import { Color } from 'tns-core-modules/color';
 import { screen } from 'tns-core-modules/platform';
-import {
-  CardViewCommon,
-  backgroundColorProperty,
-  backgroundInternalProperty,
-  radiusProperty,
-  shadowColorProperty,
-  shadowOffsetHeightProperty,
-  shadowOffsetWidthProperty,
-  shadowOpacityProperty,
-  shadowRadiusProperty
-} from './cardview-common';
+import { CardViewCommon, backgroundColorProperty, backgroundInternalProperty, radiusProperty, shadowColorProperty, shadowOffsetHeightProperty, shadowOffsetWidthProperty, shadowOpacityProperty, shadowRadiusProperty } from './cardview-common';
 
 export class CardView extends CardViewCommon {
   public nativeView: UIView;
