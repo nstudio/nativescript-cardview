@@ -1,10 +1,9 @@
-<page 
-    xmlns="http://schemas.nativescript.org/tns.xsd" 
+<page xmlns="http://schemas.nativescript.org/tns.xsd" 
     xmlns:Card="nativescript-cardview" loaded="pageLoaded">
     <action-bar title="CardView" backgroundColor="#009688" color="#fff" />
     <scroll-view>
         <stack-layout>
-            <Card:CardView margin="5" loaded="{{ cardLoaded }}" id="batCard" class="whiteCard">
+            <Card:CardView ripple="true" margin="5" loaded="{{ cardLoaded }}" id="batCard" class="whiteCard">
                 <grid-layout rows="200, auto, auto" columns="*, *">
                     <image src="~/images/batman.jpg" stretch="aspectFill" margin="10" colSpan="2" row="0" />
                     <label text="Batman wants to be friends?" class="info" textWrap="true" row="1" colSpan="2" />
