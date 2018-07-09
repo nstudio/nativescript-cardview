@@ -32,7 +32,9 @@ export class CardView extends CardViewCommon {
       this.nativeView.setClickable(false);
     } else {
       const attr = java.lang.Class.forName('android.support.v7.appcompat.R$attr');
-      const field = attr.getField('selectableItemBackground');
+
+      // https://developer.android.com/reference/java/lang/Class#getField(java.lang.String)
+      const field = attr.getField('selectableItemBackground') as java.lang.reflect.Field;
 
       if (field && android.os.Build.VERSION.SDK_INT >= 23) {
         const resId = field.getInt(null);
