@@ -2,7 +2,14 @@
 
 import * as application from 'tns-core-modules/application';
 import { Color } from 'tns-core-modules/color';
-import { CardViewCommon, backgroundColorProperty, backgroundInternalProperty, elevationProperty, radiusProperty, rippleProperty } from './cardview-common';
+import {
+  CardViewCommon,
+  backgroundColorProperty,
+  backgroundInternalProperty,
+  elevationProperty,
+  radiusProperty,
+  rippleProperty
+} from './cardview-common';
 
 export class CardView extends CardViewCommon {
   private _androidViewId: number;
@@ -27,7 +34,7 @@ export class CardView extends CardViewCommon {
       const attr = java.lang.Class.forName('android.support.v7.appcompat.R$attr');
       const field = attr.getField('selectableItemBackground');
 
-      if (field && android.os.Build.VERSION.SDK_INT >= 23  ) {
+      if (field && android.os.Build.VERSION.SDK_INT >= 23) {
         const resId = field.getInt(null);
 
         const attrs = Array.create('int', 1);
@@ -35,7 +42,6 @@ export class CardView extends CardViewCommon {
         const activity = application.android.foregroundActivity;
         const typedValue = activity.obtainStyledAttributes(attrs);
         const selectedItemDrawable = typedValue.getDrawable(0);
-
         this.nativeView.setForeground(selectedItemDrawable);
         this.nativeView.setClickable(true);
       }
