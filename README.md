@@ -1,4 +1,4 @@
-﻿<a align="center" href="https://www.npmjs.com/package/nativescript-cardview">
+<a align="center" href="https://www.npmjs.com/package/nativescript-cardview">
     <h3 align="center">NativeScript CardView</h3>
 </a>
 <h4 align="center">A NativeScript plugin to provide an XML widget to implement the Material Design CardView component.</h4>
@@ -108,6 +108,21 @@ registerElement('CardView', () => CardView);
 </CardView>
 ```
 
+## NativeScript + Vue
+
+```javascript
+import Vue from 'nativescript-vue';
+Vue.registerElement('CardView', () => require('nativescript-cardview').CardView);
+```
+
+```html
+<card-view margin="10" elevation="40" radius="1">
+  <stack-layout>
+    <label text="Hello World" />
+  </stack-layout>
+</card-view>
+```
+
 ## Attributes
 
 * **radius** _optional_
@@ -181,6 +196,6 @@ shadowRadius = 1;
 | :----------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: |
 |                                             [bradmartin](https://github.com/bradmartin)                                              |                                             [NathanWalker](https://github.com/NathanWalker)                                             |                                             [manijak](https://github.com/manijak)                                              |                                             [NathanaelA](https://github.com/NathanaelA)                                             |                                             [EddyVerbruggen](https://github.com/EddyVerbruggen)                                              |                                             [sis0k0](https://github.com/sis0k0)                                              |
 
-| [<img alt="vladimirnani" src="https://avatars0.githubusercontent.com/u/3397077?v=3&s=117" width="117">](https://github.com/vladimirnani) | [<img alt="DickSmith" src="https://avatars0.githubusercontent.com/u/6675511?v=3&s=117" width="117">](https://github.com/DickSmith) |
-| :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
-|                                             [vladimirnani](https://github.com/vladimirnani)                                              |                                             [DickSmith](https://github.com/DickSmith)                                              |
+| [<img alt="vladimirnani" src="https://avatars0.githubusercontent.com/u/3397077?v=3&s=117" width="117">](https://github.com/vladimirnani) | [<img alt="DickSmith" src="https://avatars0.githubusercontent.com/u/6675511?v=3&s=117" width="117">](https://github.com/DickSmith) | [<img alt="JoffTiquez" src="https://avatars0.githubusercontent.com/u/8638243?v=3&s=117" width="117">](https://github.com/jofftiquez) |
+| :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
+|                                             [vladimirnani](https://github.com/vladimirnani)                                              |                                             [DickSmith](https://github.com/DickSmith)                                              | [Jofferson Tiquez](https://github.com/jofftiquez) |
