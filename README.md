@@ -158,6 +158,8 @@ Vue.registerElement(
 </card-view>
 ```
 
+---
+
 ### Attributes
 
 - **radius** _optional_
