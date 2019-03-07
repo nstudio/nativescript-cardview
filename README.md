@@ -13,15 +13,13 @@
     <a href="https://github.com/bradmartin/nativescript-cardview/stargazers">
         <img src="https://img.shields.io/github/stars/bradmartin/nativescript-cardview.svg" alt="stars">
     </a>
-     <a href="https://github.com/bradmartin/nativescript-cardview/network">
-        <img src="https://img.shields.io/github/forks/bradmartin/nativescript-cardview.svg" alt="forks">
-    </a>
-    <a href="https://github.com/bradmartin/nativescript-cardview/blob/master/src/LICENSE.md">
-        <img src="https://img.shields.io/github/license/bradmartin/nativescript-cardview.svg" alt="license">
+      <a href="https://travis-ci.org/bradmartin/nativescript-cardview">
+        <img src="https://travis-ci.org/bradmartin/nativescript-cardview.svg?branch=master" alt="build status">
     </a>
     <a href="https://paypal.me/bradwayne88">
         <img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="donate">
     </a>
+    <br />
     <a href="http://nstudio.io">
       <img src="./images/nstudio-banner.png" alt="nStudio banner">
     </a>
@@ -35,15 +33,15 @@
 
 ##### NativeScript 4x
 
-* `tns plugin add nativescript-cardview`
+- `tns plugin add nativescript-cardview`
 
 ##### NativeScript 3x
 
-* `tns plugin add nativescript-cardview@2.0.5`
+- `tns plugin add nativescript-cardview@2.0.5`
 
 ##### NativeScript 2.x
 
-* `tns plugin add nativescript-cardview@1.3.2`
+- `tns plugin add nativescript-cardview@1.3.2`
 
 Be sure to run a new build after adding plugins to avoid any issues. Here is a post with some details: [Plugin Not Working after adding to project.](https://bradmartin.net/2016/07/20/ahhh-this-nativescript-plugin-doesnt-work/_)
 
@@ -96,15 +94,55 @@ registerElement('CardView', () => CardView);
 ```
 
 ```html
-<CardView class="cardStyle" margin="10" elevation="40" radius="1" >
-	<GridLayout rows="10,30,30,250, auto, auto,10" columns="10,40, *, 30,10">
-		<Image src="res://profile" stretch="aspectFit" verticalAlignment="stretch" col="1" row="1" rowSpan="2"></Image>
-		<Label class="createdBy text-left" horizontalAlignment="left" [text]="item.CreatedBy" row="1" col="2" textWrap="true"></Label>
-		<Label class="createdOn text-left" horizontalAlignment="left" [text]="item.UpdatedDate" row="2" col="2"></Label>
-		<Image [src]="'https://img.youtube.com/vi/'+item.MediaURL+'/mqdefault.jpg'" stretch="aspectFit" colSpan="3" col="1" row="3"></Image>
-		<Label horizontalAlignment="left" [text]="item.Title" colSpan="3" row="4" textWrap="true" col="1"></Label>
-		<Label  horizontalAlignment="left" [text]="item.Summary" textWrap="true" col="1" row="5" colSpan="3"></Label>
-	</GridLayout>
+<CardView class="cardStyle" margin="10" elevation="40" radius="1">
+  <GridLayout rows="10,30,30,250, auto, auto,10" columns="10,40, *, 30,10">
+    <image
+      src="res://profile"
+      stretch="aspectFit"
+      verticalAlignment="stretch"
+      col="1"
+      row="1"
+      rowSpan="2"
+    ></image>
+    <label
+      class="createdBy text-left"
+      horizontalAlignment="left"
+      [text]="item.CreatedBy"
+      row="1"
+      col="2"
+      textWrap="true"
+    ></label>
+    <label
+      class="createdOn text-left"
+      horizontalAlignment="left"
+      [text]="item.UpdatedDate"
+      row="2"
+      col="2"
+    ></label>
+    <image
+      [src]="'https://img.youtube.com/vi/'+item.MediaURL+'/mqdefault.jpg'"
+      stretch="aspectFit"
+      colSpan="3"
+      col="1"
+      row="3"
+    ></image>
+    <label
+      horizontalAlignment="left"
+      [text]="item.Title"
+      colSpan="3"
+      row="4"
+      textWrap="true"
+      col="1"
+    ></label>
+    <label
+      horizontalAlignment="left"
+      [text]="item.Summary"
+      textWrap="true"
+      col="1"
+      row="5"
+      colSpan="3"
+    ></label>
+  </GridLayout>
 </CardView>
 ```
 
@@ -112,7 +150,10 @@ registerElement('CardView', () => CardView);
 
 ```javascript
 import Vue from 'nativescript-vue';
-Vue.registerElement('CardView', () => require('nativescript-cardview').CardView);
+Vue.registerElement(
+  'CardView',
+  () => require('nativescript-cardview').CardView
+);
 ```
 
 ```html
@@ -125,7 +166,7 @@ Vue.registerElement('CardView', () => require('nativescript-cardview').CardView)
 
 ## Attributes
 
-* **radius** _optional_
+- **radius** _optional_
 
 An attribute to control the 'border-radius' of the card.
 
@@ -133,35 +174,34 @@ An attribute to control the 'border-radius' of the card.
 
 #### Android
 
-* **elevation** _optional_
+- **elevation** _optional_
 
 An attribute to set the elevation of the card. This will increase the 'drop-shadow' of the card.
 There can be some performance impact when using a very high elevation value.
 
-* **ripple** _optional_
+- **ripple** _optional_
 
 Set to 'true' to show a ripple when the card is tapped. Tap event handlers in the card content will prevent the ripple.
 
-
 #### iOS
 
-* **shadowOffsetWidth** _optional_
+- **shadowOffsetWidth** _optional_
 
 An attribute to offset the x position of the shadow behind the card.
 
-* **shadowOffsetHeight** _optional_
+- **shadowOffsetHeight** _optional_
 
 An attribute to offset the y position of the shadow behind the card.
 
-* **shadowColor** _optional_
+- **shadowColor** _optional_
 
 An attribute to set the color of the shadow behind the card.
 
-* **shadowOpacity** _optional_
+- **shadowOpacity** _optional_
 
 An attribute to set the opacity of the shadow behind the card.
 
-* **shadowRadius** _optional_
+- **shadowRadius** _optional_
 
 An attribute to set the radius of the shadow (shadow spread) behind the card.
 
@@ -197,5 +237,5 @@ shadowRadius = 1;
 |                                             [bradmartin](https://github.com/bradmartin)                                              |                                             [NathanWalker](https://github.com/NathanWalker)                                             |                                             [manijak](https://github.com/manijak)                                              |                                             [NathanaelA](https://github.com/NathanaelA)                                             |                                             [EddyVerbruggen](https://github.com/EddyVerbruggen)                                              |                                             [sis0k0](https://github.com/sis0k0)                                              |
 
 | [<img alt="vladimirnani" src="https://avatars0.githubusercontent.com/u/3397077?v=3&s=117" width="117">](https://github.com/vladimirnani) | [<img alt="DickSmith" src="https://avatars0.githubusercontent.com/u/6675511?v=3&s=117" width="117">](https://github.com/DickSmith) | [<img alt="JoffTiquez" src="https://avatars0.githubusercontent.com/u/8638243?v=3&s=117" width="117">](https://github.com/jofftiquez) |
-| :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: |
-|                                             [vladimirnani](https://github.com/vladimirnani)                                              |                                             [DickSmith](https://github.com/DickSmith)                                              | [Jofferson Tiquez](https://github.com/jofftiquez) |
+| :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------: |
+|                                             [vladimirnani](https://github.com/vladimirnani)                                              |                                             [DickSmith](https://github.com/DickSmith)                                              |                                          [Jofferson Tiquez](https://github.com/jofftiquez)                                           |
