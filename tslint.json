@@ -1,4 +1,8 @@
 {
+  "defaultSeverity": "error",
+  "linterOptions": {
+    "exclude": ["node_modules", "hooks", "platforms", "src/typings"]
+  },
   "rules": {
     "class-name": true,
     "comment-format": [true, "check-space"],
@@ -8,7 +12,6 @@
     "no-internal-module": true,
     "no-trailing-whitespace": true,
     "no-var-keyword": true,
-    "prefer-const": true,
     "one-line": [true, "check-open-brace", "check-whitespace"],
     "quotemark": [false, "double"],
     "semicolon": [true, "always"],

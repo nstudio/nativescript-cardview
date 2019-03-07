@@ -10,5 +10,5 @@ dependencies {
        supportVer = supportVersion
       }
 
-	 compile "com.android.support:cardview-v7:$supportVer"
+	 implementation "com.android.support:cardview-v7:$supportVer"
 }

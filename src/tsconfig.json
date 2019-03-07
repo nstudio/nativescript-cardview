@@ -2,23 +2,18 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "moduleResolution": "node",
+    "skipLibCheck": true,
     "removeComments": true,
     "experimentalDecorators": true,
-    "sourceMap": true,
-    "noLib": false,
-    "noEmitHelpers": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
+    "declaration": false,
     "noEmitOnError": false,
-    "noImplicitAny": false,
-    "noImplicitReturns": true,
-    "noImplicitUseStrict": false,
-    "noFallthroughCasesInSwitch": true,
+    "noEmitHelpers": true,
+    "noImplicitUseStrict": true,
     "lib": ["es6", "dom"],
+    "rootDir": ".",
     "baseUrl": ".",
     "paths": {
-      "*": ["./node_modules/tns-core-modules/*", "./node_modules/*", "demo/node_modules", "platforms"]
+      "*": ["./node_modules/tns-core-modules/*", "./node_modules/*"]
     }
   },
   "files": ["cardview-common.ts", "cardview.android.ts", "cardview.ios.ts"],

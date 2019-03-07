@@ -32,7 +32,7 @@
     <style name="AppTheme" parent="AppThemeBase">
     </style>
 
-    <!-- theme for actioon-bar -->
+    <!-- theme for action-bar -->
     <style name="NativeScriptToolbarStyleBase" parent="Widget.AppCompat.Toolbar">
         <item name="android:background">@color/ns_primary</item>
         <item name="theme">@style/ThemeOverlay.AppCompat.ActionBar</item>

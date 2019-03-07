@@ -1,6 +1,6 @@
 {
   "name": "nativescript-cardview",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "A NativeScript plugin for Material Design CardView component.",
   "main": "cardview",
   "typings": "index.d.ts",
@@ -12,24 +12,21 @@
   },
   "scripts": {
     "tsc": "tsc -skipLibCheck",
-    "build": "npm i && tsc && npm run build.native",
+    "build": "npm i && tsc",
     "build.native": "node scripts/build-native.js",
-    "postclone": "npm i && node scripts/postclone.js && cd ../demo && npm i && cd ../src && npm run plugin.link",
     "test.android": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
     "test.ios": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build ios && tns test ios --justlaunch",
-    "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
-    "plugin.link": "npm link && cd ../demo && npm link nativescript-cardview && cd ../src",
+    "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\" --exclude \"*demo*/platforms/**\"",
+    "plugin.link": "npm link && cd ../demo && npm link nativescript-geolocation && cd ../src",
     "plugin.tscwatch": "npm run tsc -- -w",
     "demo.ios": "npm i && npm run tsc && cd ../demo && tns run ios --syncAllFiles",
     "demo.android": "npm i && npm run tsc && cd ../demo && tns run android --syncAllFiles",
-    "demo.reset": "cd ../demo && rimraf platforms",
-    "plugin.prepare": "npm run tsc && cd ../demo && tns plugin remove nativescript-cardview && tns plugin add ../src",
-    "clean": "cd ../demo && rimraf hooks node_modules platforms && cd ../src && rimraf node_modules && npm run plugin.link",
     "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",
-    "prepack": "npm run build.native"
+    "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.ts": [
+    "*.ts, *.js, *.css, *.scss, *.md": [
+      "tslint",
       "prettier --write",
       "git add"
     ]
@@ -45,7 +42,9 @@
     "android",
     "ios",
     "CardView",
-    "Material Design"
+    "Material Design",
+    "nstudio",
+    "bradmartin"
   ],
   "contributors": [
     {
@@ -110,15 +109,13 @@
   "readme": "README.md",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "husky": "^0.14.3",
-    "lint-staged": "^7.0.4",
-    "prettier": "^1.13.2",
-    "tns-core-modules": "^4.0.0",
-    "tns-platform-declarations": "~3.4.0",
-    "typescript": "2.8.3",
-    "prompt": "^1.0.0",
-    "rimraf": "^2.5.0",
-    "tslint": "^5.0.0",
-    "semver": "^5.5.0"
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.4",
+    "prettier": "^1.16.4",
+    "tns-core-modules": "^5.2.2",
+    "tns-platform-declarations": "^5.2.2",
+    "rimraf": "^2.6.3",
+    "tslint": "~5.13.1",
+    "typescript": "~3.1.6"
   }
 }
