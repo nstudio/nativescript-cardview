@@ -31,17 +31,7 @@
 
 ## Installation
 
-##### NativeScript 4x
-
-- `tns plugin add nativescript-cardview`
-
-##### NativeScript 3x
-
-- `tns plugin add nativescript-cardview@2.0.5`
-
-##### NativeScript 2.x
-
-- `tns plugin add nativescript-cardview@1.3.2`
+`tns plugin add nativescript-cardview`
 
 Be sure to run a new build after adding plugins to avoid any issues. Here is a post with some details: [Plugin Not Working after adding to project.](https://bradmartin.net/2016/07/20/ahhh-this-nativescript-plugin-doesnt-work/_)
 
@@ -51,17 +41,17 @@ Be sure to run a new build after adding plugins to avoid any issues. Here is a p
 
 ##### [CardView Android Documentation](http://developer.android.com/intl/zh-tw/reference/android/support/v7/widget/CardView.html)
 
-### Usage
+## Usage
 
 _iOS note: Setting a background-color will help if you do not see the card on the page._
 
-## Plain NativeScript
+### NativeScript Plain
 
 <span style="color:red">IMPORTANT: </span>_Make sure you include `xmlns:Card="nativescript-cardview"` on the Page element_
 
-### XML
+#### XML
 
-```XML
+```xml
 <Page xmlns:Card="nativescript-cardview">
    <StackLayout>
       <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
@@ -76,16 +66,18 @@ _iOS note: Setting a background-color will help if you do not see the card on th
 </Page>
 ```
 
-### CSS
+#### CSS
 
-```CSS
+```css
 .cardStyle {
-    background-color: #3489db;
-    color: #fff;
+  background-color: #3489db;
+  color: #fff;
 }
 ```
 
-## NativeScript + Angular
+---
+
+### NativeScript Angular
 
 ```typescript
 import { registerElement } from 'nativescript-angular/element-registry';
@@ -146,7 +138,9 @@ registerElement('CardView', () => CardView);
 </CardView>
 ```
 
-## NativeScript + Vue
+---
+
+### NativeScript Vue
 
 ```javascript
 import Vue from 'nativescript-vue';
@@ -164,7 +158,7 @@ Vue.registerElement(
 </card-view>
 ```
 
-## Attributes
+### Attributes
 
 - **radius** _optional_
 
@@ -216,7 +210,7 @@ shadowOpacity = 0.4;
 shadowRadius = 1;
 ```
 
-## Sample Screenshots
+### Sample Screenshots
 
 #### Android
 
