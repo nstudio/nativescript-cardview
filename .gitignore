@@ -40,3 +40,6 @@ demo/report/report.html
 demo/report/stats.json
 !demo/webpack.config.js
 !demo/app/tests/**.js
+
+## Vue app
+!demo-vue/**/*.js
