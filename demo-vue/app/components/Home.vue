@@ -4,29 +4,21 @@
       <Label class="action-bar-title" text="Home"></Label>
     </ActionBar>
 
-    <GridLayout>
-      <CardView ripple="true" margin="5" loaded="{{ cardLoaded }}" id="batCard" class="whiteCard">
-        <grid-layout rows="200, auto, auto" columns="*, *">
-          <image src="res://icon" stretch="aspectFill" margin="10" colspan="2" row="0">
-          <label
-            text="NativeScript wants to be friends?"
-            class="info"
-            textWrap="true"
-            row="1"
-            colspan="2"
-          />
-          <button text="Decline" class="blue" row="2" col="0"/>
-          <button text="Accept" class="blue" row="2" col="1"/>
-        </grid-layout>
+    <StackLayout>
+      <Label text="CardView working in NativeScript-Vue" class="h3"/>
+      <CardView ripple="true" padding="5" margin="5" height="300">
+        <StackLayout>
+          <Label class="info" horizontalAlignment="center" verticalAlignment="center">
+            <FormattedString>
+              <Span class="fa" text.decode="&#xf135; "/>
+              <Span :text="message"/>
+            </FormattedString>
+          </Label>
+          <Image src="res://icon" stretch="aspectFit" height="120"/>
+          <Button text="Button"/>
+        </StackLayout>
       </CardView>
-
-      <Label class="info" horizontalAlignment="center" verticalAlignment="center">
-        <FormattedString>
-          <Span class="fa" text.decode="&#xf135; "/>
-          <Span :text="message"/>
-        </FormattedString>
-      </Label>
-    </GridLayout>
+    </StackLayout>
   </Page>
 </template>
 

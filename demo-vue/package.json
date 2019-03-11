@@ -1,8 +1,11 @@
 {
   "nativescript": {
-    "id": "org.nativescript.cardview.vue",
+    "id": "org.nativescript.demovue",
     "tns-android": {
       "version": "5.2.1"
+    },
+    "tns-ios": {
+      "version": "5.2.0"
     }
   },
   "description": "NativeScript Application",
@@ -11,23 +14,19 @@
   "dependencies": {
     "nativescript-cardview": "file:../src",
     "nativescript-theme-core": "~1.0.4",
-    "nativescript-vue": "~2.0.2",
-    "tns-core-modules": "~5.2.2"
+    "nativescript-vue": "~2.0.0",
+    "tns-core-modules": "~5.2.0"
   },
   "devDependencies": {
     "@babel/core": "~7.1.0",
     "@babel/preset-env": "~7.1.0",
     "babel-loader": "~8.0.0",
-    "jasmine-core": "3.3.0",
-    "karma": "4.0.1",
-    "karma-jasmine": "1.1.2",
-    "karma-nativescript-launcher": "0.4.0",
-    "nativescript-dev-typescript": "~0.8.0",
-    "nativescript-dev-webpack": "^0.20.2",
-    "tns-platform-declarations": "^5.2.2",
+    "nativescript-dev-webpack": "~0.20.2",
     "nativescript-vue-template-compiler": "~2.0.2",
     "node-sass": "~4.9.0",
-    "vue-loader": "~15.4.0"
+    "vue-loader": "~15.4.0",
+    "tslint": "~5.13.1",
+    "typescript": "~3.1.6"
   },
   "gitHead": "f548ec926e75201ab1b7c4a3a7ceefe7a4db15af",
   "readme": "NativeScript Application"
