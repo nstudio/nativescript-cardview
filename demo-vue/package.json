@@ -28,6 +28,10 @@
     "tslint": "~5.13.1",
     "typescript": "~3.1.6"
   },
+  "scripts": {
+    "build.plugin": "cd ../src && npm run build",
+    "ci.tslint": "npm i && tslint --config '../tslint.json' 'app/**/*.ts' --exclude '**/node_modules/**' --exclude '**/platforms/**'"
+  },
   "gitHead": "f548ec926e75201ab1b7c4a3a7ceefe7a4db15af",
   "readme": "NativeScript Application"
 }
