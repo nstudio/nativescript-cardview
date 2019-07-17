@@ -223,6 +223,23 @@ shadowRadius = 1;
 | --------------------------------------- | --------------------------------------- |
 | ![Sample1](images/sample_card1_ios.png) | ![Sample2](images/sample_card3_ios.png) |
 
+## Run Demo
+
+```bash
+git clone https://github.com/nstudio/nativescript-cardview.git
+cd nativescript-cardview/src && npm run setup
+
+npm run demo.ios
+
+// or...
+
+npm run demo.android
+```
+
+## [Changelog](./CHANGELOG.md)
+
+## [Contributing](./CONTRIBUTING.md)
+
 #### Contributors
 
 | [<img alt="bradmartin" src="https://avatars3.githubusercontent.com/u/6006148?v=3&s=117" width="117">](https://github.com/bradmartin) | [<img alt="NathanWalker" src="https://avatars1.githubusercontent.com/u/457187?v=3&s=117" width="117">](https://github.com/NathanWalker) | [<img alt="manijak" src="https://avatars3.githubusercontent.com/u/3605066?v=3&s=117" width="117">](https://github.com/manijak) | [<img alt="NathanaelA" src="https://avatars0.githubusercontent.com/u/850871?v=3&s=117" width="117">](https://github.com/NathanaelA) | [<img alt="EddyVerbruggen" src="https://avatars2.githubusercontent.com/u/1426370?v=3&s=117" width="117">](https://github.com/EddyVerbruggen) | [<img alt="sis0k0" src="https://avatars1.githubusercontent.com/u/7893485?v=3&s=117" width="117">](https://github.com/sis0k0) |

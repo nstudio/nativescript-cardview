@@ -21,7 +21,8 @@
     "setup": "npm i && tsc",
     "demo.ios": "cd ../demo && tns run ios",
     "demo.android": "cd ../demo && tns run android",
-    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'"
+    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",
+    "make-changelog": "cd ../ && github_changelog_generator -u nstudio -p nativescript-cardview --token=5271dafe824473addebf5951888d904c36164b0b"
   },
   "lint-staged": {
     "**/*.{js, css, ts, json, scss, html, xml, md}": [
