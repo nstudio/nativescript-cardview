@@ -2,10 +2,10 @@
   "nativescript": {
     "id": "org.nativescript.demovue",
     "tns-android": {
-      "version": "6.0.0"
+      "version": "5.2.1"
     },
     "tns-ios": {
-      "version": "6.0.1"
+      "version": "5.2.0"
     }
   },
   "description": "NativeScript Application",
@@ -14,19 +14,19 @@
   "dependencies": {
     "@nstudio/nativescript-cardview": "file:../src",
     "nativescript-theme-core": "~1.0.4",
-    "nativescript-vue": "2.3.0",
-    "tns-core-modules": "6.0.1"
+    "nativescript-vue": "~2.0.0",
+    "tns-core-modules": "~5.2.0"
   },
   "devDependencies": {
     "@babel/core": "~7.1.0",
     "@babel/preset-env": "~7.1.0",
     "babel-loader": "~8.0.0",
-    "nativescript-dev-webpack": "1.0.1",
+    "nativescript-dev-webpack": "~0.20.2",
     "nativescript-vue-template-compiler": "~2.0.2",
-    "node-sass": "4.12.0",
+    "node-sass": "~4.9.0",
     "vue-loader": "~15.4.0",
     "tslint": "~5.13.1",
-    "typescript": "3.4.5"
+    "typescript": "~3.1.6"
   },
   "scripts": {
     "build.plugin": "cd ../src && npm run build",

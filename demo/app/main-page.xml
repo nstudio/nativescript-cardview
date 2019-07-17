@@ -1,5 +1,5 @@
 <page xmlns="http://schemas.nativescript.org/tns.xsd" 
-    xmlns:Card="nativescript-cardview" loaded="pageLoaded">
+    xmlns:Card="@nstudio/nativescript-cardview" loaded="pageLoaded">
     <action-bar title="CardView" backgroundColor="#00796b" color="#fff" />
     <scroll-view>
         <stack-layout>

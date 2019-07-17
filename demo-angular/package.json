@@ -2,7 +2,7 @@
   "nativescript": {
     "id": "org.nativescript.cardview.angular",
     "tns-android": {
-      "version": "5.2.1"
+      "version": "6.0.0"
     }
   },
   "description": "NativeScript Application",
@@ -10,29 +10,29 @@
   "repository": "<fill-your-repository-here>",
   "dependencies": {
     "@angular/animations": "~7.2.0",
-    "@angular/common": "~7.2.0",
-    "@angular/compiler": "~7.2.0",
-    "@angular/core": "~7.2.0",
-    "@angular/forms": "~7.2.0",
-    "@angular/http": "~7.2.0",
-    "@angular/platform-browser": "~7.2.0",
-    "@angular/platform-browser-dynamic": "~7.2.0",
-    "@angular/router": "~7.2.0",
-    "nativescript-angular": "~7.2.1",
-    "nativescript-cardview": "file:../src",
+    "@angular/common": "8.0.0",
+    "@angular/compiler": "8.0.0",
+    "@angular/core": "8.0.0",
+    "@angular/forms": "8.0.0",
+    "@angular/http": "8.0.0-beta.10",
+    "@angular/platform-browser": "8.0.0",
+    "@angular/platform-browser-dynamic": "8.0.0",
+    "@angular/router": "8.0.0",
+    "nativescript-angular": "8.0.2",
+    "@nstudio/nativescript-cardview": "file:../src",
     "nativescript-theme-core": "~1.0.4",
     "reflect-metadata": "~0.1.12",
     "rxjs": "~6.3.0",
-    "tns-core-modules": "~5.2.2",
-    "zone.js": "~0.8.26"
+    "tns-core-modules": "6.0.1",
+    "zone.js": "0.9.1"
   },
   "devDependencies": {
     "@angular/compiler-cli": "~7.2.0",
     "@nativescript/schematics": "~0.5.0",
     "@ngtools/webpack": "~7.2.0",
     "awesome-typescript-loader": "~5.2.1",
-    "nativescript-dev-typescript": "~0.8.0",
-    "nativescript-dev-webpack": "~0.20.2"
+    "nativescript-dev-webpack": "1.0.1",
+    "typescript": "3.4.5"
   },
   "gitHead": "f548ec926e75201ab1b7c4a3a7ceefe7a4db15af",
   "readme": "NativeScript Application"

@@ -1,27 +1,24 @@
-<a align="center" href="https://www.npmjs.com/package/nativescript-cardview">
+<a align="center" href="https://www.npmjs.com/package/@nstudio/nativescript-cardview">
     <h3 align="center">NativeScript CardView</h3>
 </a>
 <h4 align="center">A NativeScript plugin to provide an XML widget to implement the Material Design CardView component.</h4>
 
 <p align="center">
-    <a href="https://www.npmjs.com/package/nativescript-cardview">
-        <img src="https://img.shields.io/npm/v/nativescript-cardview.svg" alt="npm">
+    <a href="https://www.npmjs.com/package/@nstudio/nativescript-cardview">
+        <img src="https://img.shields.io/npm/v/@nstudio/nativescript-cardview.svg" alt="npm">
     </a>
-    <a href="https://www.npmjs.com/package/nativescript-cardview">
-        <img src="https://img.shields.io/npm/dt/nativescript-cardview.svg?label=npm%20downloads" alt="npm">
+    <a href="https://www.npmjs.com/package/@nstudio/nativescript-cardview">
+        <img src="https://img.shields.io/npm/dt/@nstudio/nativescript-cardview.svg?label=npm%20downloads" alt="npm">
     </a>
-    <a href="https://github.com/bradmartin/nativescript-cardview/stargazers">
-        <img src="https://img.shields.io/github/stars/bradmartin/nativescript-cardview.svg" alt="stars">
+    <a href="https://github.com/nstudio/nativescript-cardview/stargazers">
+        <img src="https://img.shields.io/github/stars/nstudio/nativescript-cardview.svg" alt="stars">
     </a>
-      <a href="https://travis-ci.org/bradmartin/nativescript-cardview">
-        <img src="https://travis-ci.org/bradmartin/nativescript-cardview.svg?branch=master" alt="build status">
-    </a>
-    <a href="https://paypal.me/bradwayne88">
-        <img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="donate">
+      <a href="https://travis-ci.org/nstudio/nativescript-cardview">
+        <img src="https://travis-ci.org/nstudio/nativescript-cardview.svg?branch=master" alt="build status">
     </a>
     <br />
-    <a href="http://nstudio.io">
-      <img src="./images/nstudio-banner.png" alt="nStudio banner">
+    <a href="https://nstudio.io">
+      <img src="https://github.com/nstudio/media/blob/master/images/nstudio-banner.png?raw=true" alt="nStudio banner">
     </a>
     <h5 align="center">Do you need assistance on your project or plugin? Contact the nStudio team anytime at <a href="mailto:team@nstudio.io">team@nstudio.io</a> to get up to speed with the best practices in mobile and web app development.
     </h5>
@@ -31,7 +28,7 @@
 
 ## Installation
 
-`tns plugin add nativescript-cardview`
+`tns plugin add @nstudio/nativescript-cardview`
 
 Be sure to run a new build after adding plugins to avoid any issues. Here is a post with some details: [Plugin Not Working after adding to project.](https://bradmartin.net/2016/07/20/ahhh-this-nativescript-plugin-doesnt-work)
 
@@ -47,12 +44,12 @@ _iOS note: Setting a background-color will help if you do not see the card on th
 
 ### NativeScript Plain
 
-<span style="color:red">IMPORTANT: </span>_Make sure you include `xmlns:Card="nativescript-cardview"` on the Page element_
+<span style="color:red">IMPORTANT: </span>_Make sure you include `xmlns:Card="@nstudio/nativescript-cardview"` on the Page element_
 
 #### XML
 
 ```xml
-<Page xmlns:Card="nativescript-cardview">
+<Page xmlns:Card="@nstudio/nativescript-cardview">
    <StackLayout>
       <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
            <grid-layout rows="200, auto, auto" columns="auto, auto, *">
@@ -81,7 +78,7 @@ _iOS note: Setting a background-color will help if you do not see the card on th
 
 ```typescript
 import { registerElement } from 'nativescript-angular/element-registry';
-import { CardView } from 'nativescript-cardview';
+import { CardView } from '@nstudio/nativescript-cardview';
 registerElement('CardView', () => CardView);
 ```
 
@@ -146,14 +143,14 @@ registerElement('CardView', () => CardView);
 import Vue from 'nativescript-vue';
 Vue.registerElement(
   'CardView',
-  () => require('nativescript-cardview').CardView
+  () => require('@nstudio/nativescript-cardview').CardView
 );
 ```
 
 ```html
 <card-view margin="10" elevation="40" radius="1">
   <stack-layout>
-    <label text="Hello World" />
+    <label text="Hello World"></label>
   </stack-layout>
 </card-view>
 ```

@@ -1,5 +1,5 @@
+import { CardView } from '@nstudio/nativescript-cardview';
 import { EventData, Observable } from 'tns-core-modules/data/observable';
-import { CardView } from 'nativescript-cardview';
 import { isAndroid, isIOS } from 'tns-core-modules/platform';
 import * as frame from 'tns-core-modules/ui/frame';
 
