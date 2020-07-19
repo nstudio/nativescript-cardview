@@ -1,6 +1,4 @@
-import { Color } from 'tns-core-modules/color';
-import { ContentView, Property } from 'tns-core-modules/ui/content-view';
-export { backgroundColorProperty, backgroundInternalProperty } from 'tns-core-modules/ui/core/view';
+import { Color, ContentView, Property } from '@nativescript/core';
 
 /**
  * Contains the CardView class, which represents a card view component.
