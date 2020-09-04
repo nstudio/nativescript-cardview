@@ -23,7 +23,7 @@
     "babel-loader": "~8.0.0",
     "nativescript-dev-webpack": "1.0.1",
     "nativescript-vue-template-compiler": "~2.0.2",
-    "node-sass": "4.12.0",
+    "node-sass": "4.14.1",
     "vue-loader": "~15.4.0",
     "tslint": "~5.13.1",
     "typescript": "3.4.5"
