@@ -1,7 +1,11 @@
+import {
+  EventData,
+  Frame,
+  isAndroid,
+  isIOS,
+  Observable
+} from '@nativescript/core';
 import { CardView } from '@nstudio/nativescript-cardview';
-import { EventData, Observable } from 'tns-core-modules/data/observable';
-import { isAndroid, isIOS } from 'tns-core-modules/platform';
-import * as frame from 'tns-core-modules/ui/frame';
 
 export class Demo extends Observable {
   constructor() {
@@ -9,7 +13,7 @@ export class Demo extends Observable {
   }
 
   public goAway(args) {
-    const page = frame.topmost().currentPage;
+    const page = Frame.topmost().currentPage;
     const card = page.getViewById('batCard') as CardView;
     card
       .animate({
@@ -23,7 +27,7 @@ export class Demo extends Observable {
   }
 
   public goAwayJoker(args) {
-    const page = frame.topmost().currentPage;
+    const page = Frame.topmost().currentPage;
     const card = page.getViewById('jokerCard') as CardView;
     card
       .animate({

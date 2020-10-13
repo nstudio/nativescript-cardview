@@ -1,25 +1,18 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
-        "noEmitHelpers": true,
-        "noEmitOnError": true,
-        "lib": [
-            "es6",
-            "dom",
-            "es2015.iterable"
-        ],
-        "baseUrl": ".",
-        "paths": {
-            "~/*": [
-                "src/*"
-            ]
-        }
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2017",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmitHelpers": true,
+    "noEmitOnError": true,
+    "lib": ["es6", "dom", "es2015.iterable", "es2017"],
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["src/*"]
     },
-    "exclude": [
-        "node_modules",
-        "platforms"
-    ]
+    "moduleResolution": "node",
+    "removeComments": false
+  },
+  "exclude": ["node_modules", "platforms"]
 }

@@ -1,0 +1,50 @@
+name: Build CI
+
+# Trigger the workflow on push
+on: [push]
+
+jobs:
+  job1:
+    name: Android Build
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Base Setup
+        run: npm run ci.base.setup
+
+      - name: Lint
+        run: npm run ci.tslint
+
+      - name: Build Vanilla Android Demo App
+        run: npm run ci.vanilla.android.build
+
+      # - name: Install Android sdkmanager
+      #   run: |
+      #     wget --quiet --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-darwin-4333796.zip
+      #     sudo unzip -d $ANDROID_HOME android-sdk.zip > /dev/null
+      # - name: Install required Android tools
+      #   run: |
+      #     echo "y" | sudo $ANDROID_HOME/tools/bin/sdkmanager "ndk;${ANDROID_NDK}" > /dev/null
+      # - name: Android Test
+      #   run: |
+      #     echo no | android create avd --force -n test -b armeabi-v7a
+      #     emulator -avd test -no-audio -no-window &
+      #     android-wait-for-emulator
+      #     cd src && npm i && npm run tsc && cd ../demo && tns build android
+      #     tns test android --justlaunch
+
+  job2:
+    name: iOS Build
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Base Setup
+        run: npm run ci.base.setup && npm run ci.pip.install
+
+      - name: Build Vanilla iOS Demo App
+        run: npm run ci.vanilla.ios.build

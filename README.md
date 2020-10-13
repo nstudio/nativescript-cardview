@@ -10,27 +10,23 @@
     <a href="https://www.npmjs.com/package/@nstudio/nativescript-cardview">
         <img src="https://img.shields.io/npm/dt/@nstudio/nativescript-cardview.svg?label=npm%20downloads" alt="npm">
     </a>
-    <a href="https://github.com/nstudio/nativescript-cardview/stargazers">
-        <img src="https://img.shields.io/github/stars/nstudio/nativescript-cardview.svg" alt="stars">
-    </a>
-      <a href="https://travis-ci.org/nstudio/nativescript-cardview">
-        <img src="https://travis-ci.org/nstudio/nativescript-cardview.svg?branch=master" alt="build status">
-    </a>
-    <br />
-    <a href="https://nstudio.io">
-      <img src="https://github.com/nstudio/media/blob/master/images/nstudio-banner.png?raw=true" alt="nStudio banner">
-    </a>
-    <h5 align="center">Do you need assistance on your project or plugin? Contact the nStudio team anytime at <a href="mailto:team@nstudio.io">team@nstudio.io</a> to get up to speed with the best practices in mobile and web app development.
-    </h5>
 </p>
 
 ---
 
 ## Installation
 
-`tns plugin add @nstudio/nativescript-cardview`
+NativeScript 7+:
 
-Be sure to run a new build after adding plugins to avoid any issues. Here is a post with some details: [Plugin Not Working after adding to project.](https://bradmartin.net/2016/07/20/ahhh-this-nativescript-plugin-doesnt-work)
+```bash
+ns plugin add @nstudio/nativescript-cardview
+```
+
+NativeScript prior to 7:
+
+```bash
+tns plugin add @nstudio/nativescript-cardview@1.0.0
+```
 
 ---
 
@@ -77,7 +73,7 @@ _iOS note: Setting a background-color will help if you do not see the card on th
 ### NativeScript Angular
 
 ```typescript
-import { registerElement } from 'nativescript-angular/element-registry';
+import { registerElement } from '@nativescript/angular';
 import { CardView } from '@nstudio/nativescript-cardview';
 registerElement('CardView', () => CardView);
 ```
@@ -227,7 +223,6 @@ shadowRadius = 1;
 
 ```bash
 git clone https://github.com/nstudio/nativescript-cardview.git
-cd nativescript-cardview/src && npm run setup
 
 npm run demo.ios
 
@@ -239,13 +234,3 @@ npm run demo.android
 ## [Changelog](./CHANGELOG.md)
 
 ## [Contributing](./CONTRIBUTING.md)
-
-#### Contributors
-
-| [<img alt="bradmartin" src="https://avatars3.githubusercontent.com/u/6006148?v=3&s=117" width="117">](https://github.com/bradmartin) | [<img alt="NathanWalker" src="https://avatars1.githubusercontent.com/u/457187?v=3&s=117" width="117">](https://github.com/NathanWalker) | [<img alt="manijak" src="https://avatars3.githubusercontent.com/u/3605066?v=3&s=117" width="117">](https://github.com/manijak) | [<img alt="NathanaelA" src="https://avatars0.githubusercontent.com/u/850871?v=3&s=117" width="117">](https://github.com/NathanaelA) | [<img alt="EddyVerbruggen" src="https://avatars2.githubusercontent.com/u/1426370?v=3&s=117" width="117">](https://github.com/EddyVerbruggen) | [<img alt="sis0k0" src="https://avatars1.githubusercontent.com/u/7893485?v=3&s=117" width="117">](https://github.com/sis0k0) |
-| :----------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: |
-|                                             [bradmartin](https://github.com/bradmartin)                                              |                                             [NathanWalker](https://github.com/NathanWalker)                                             |                                             [manijak](https://github.com/manijak)                                              |                                             [NathanaelA](https://github.com/NathanaelA)                                             |                                             [EddyVerbruggen](https://github.com/EddyVerbruggen)                                              |                                             [sis0k0](https://github.com/sis0k0)                                              |
-
-| [<img alt="vladimirnani" src="https://avatars0.githubusercontent.com/u/3397077?v=3&s=117" width="117">](https://github.com/vladimirnani) | [<img alt="DickSmith" src="https://avatars0.githubusercontent.com/u/6675511?v=3&s=117" width="117">](https://github.com/DickSmith) | [<img alt="JoffTiquez" src="https://avatars0.githubusercontent.com/u/8638243?v=3&s=117" width="117">](https://github.com/jofftiquez) |
-| :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------: |
-|                                             [vladimirnani](https://github.com/vladimirnani)                                              |                                             [DickSmith](https://github.com/DickSmith)                                              |                                          [Jofferson Tiquez](https://github.com/jofftiquez)                                           |

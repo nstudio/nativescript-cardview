@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { registerElement } from '@nativescript/angular';
 import { CardView } from '@nstudio/nativescript-cardview';
-import { registerElement } from 'nativescript-angular';
 
 registerElement('CardView', () => CardView as any);
 

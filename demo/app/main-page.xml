@@ -1,4 +1,4 @@
-<page xmlns="http://schemas.nativescript.org/tns.xsd" 
+<page xmlns="http://schemas.nativescript.org/tns.xsd"
     xmlns:Card="@nstudio/nativescript-cardview" loaded="pageLoaded">
     <action-bar title="CardView" backgroundColor="#00796b" color="#fff" />
     <scroll-view>
@@ -56,32 +56,6 @@
                     </grid-layout>
                 </Card:CardView>
             </grid-layout>
-            <Card:CardView margin="5" id="facebookCard" radius="30" elevation="15" class="whiteCard">
-                <grid-layout rows="auto, auto, 250, auto" columns="60, auto, *">
-                    <label text="B" class="avatar-circle" row="0" col="0" />
-                    <label text="Brad Martin" textWrap="true" margin="10" class="size16 align-center" row="0" col="1" />
-                    <label text="I like long walks on the beach and candlelit dinners..." textWrap="true" margin="10" class="size16" row="1" colSpan="3" />
-                    <image src="~/images/vegas.jpg" stretch="aspectFill" row="2" colSpan="3" />
-                    <grid-layout row="3" colSpan="3" rows="auto" columns="auto, auto, auto">
-                        <button text="&#xE80D;" class="Material info clear-btn gray" col="0" />
-                        <button text="&#xE0B9;" class="Material info clear-btn gray" col="1" />
-                        <button text="&#xE87D;" class="Material info clear-btn gray" col="2" />
-                    </grid-layout>
-                </grid-layout>
-            </Card:CardView>
-            <Card:CardView margin="10" radius="10" elevation="15" shadowOffsetWidth="10" shadowOffsetHeight="10" class="whiteCard">
-                <grid-layout rows="auto, auto, 250, auto" columns="60, auto, *">
-                    <label text="N" class="avatar-circle" row="0" col="0" />
-                    <label text="Nathanael Anderson" textWrap="true" margin="10" class="size16 align-center" row="0" col="1" />
-                    <label text="If you know what load &#8220;*&#8221;,8,1 is; you might have a clue as to how long I've been programming." textWrap="true" margin="10" class="size16" row="1" colSpan="3" />
-                    <image src="~/images/nathanael.jpg" stretch="aspectFill" row="2" colSpan="3" />
-                    <grid-layout row="3" colSpan="3" rows="auto" columns="auto, auto, auto">
-                        <button text="&#xE80D;" class="Material info clear-btn gray" col="0" />
-                        <button text="&#xE0B9;" class="Material info clear-btn gray" col="1" />
-                        <button text="&#xE87D;" class="Material info clear-btn gray" col="2" />
-                    </grid-layout>
-                </grid-layout>
-            </Card:CardView>
         </stack-layout>
     </scroll-view>
 </page>

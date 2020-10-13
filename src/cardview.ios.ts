@@ -1,11 +1,21 @@
-
-
-import { Color, Screen, backgroundColorProperty, backgroundInternalProperty } from '@nativescript/core';
-
-import { CardViewCommon, radiusProperty, shadowColorProperty, shadowOffsetHeightProperty, shadowOffsetWidthProperty, shadowOpacityProperty, shadowRadiusProperty } from './cardview-common';
+import {
+  backgroundColorProperty,
+  backgroundInternalProperty,
+  Color,
+  Screen
+} from '@nativescript/core';
+import {
+  CardViewCommon,
+  radiusProperty,
+  shadowColorProperty,
+  shadowOffsetHeightProperty,
+  shadowOffsetWidthProperty,
+  shadowOpacityProperty,
+  shadowRadiusProperty
+} from './cardview-common';
 
 export class CardView extends CardViewCommon {
-  public nativeView: UIView;
+  nativeView: UIView;
 
   constructor() {
     super();
@@ -20,6 +30,7 @@ export class CardView extends CardViewCommon {
     this.shadowOffsetWidth = 0;
   }
 
+  // @ts-ignore
   get ios(): any {
     return this.nativeView;
   }
@@ -33,11 +44,14 @@ export class CardView extends CardViewCommon {
   }
 
   [backgroundColorProperty.setNative](value: Color) {
-    this.nativeView.backgroundColor = value !== undefined ? value.ios : new Color('#FFFFFF').ios;
+    this.nativeView.backgroundColor =
+      value !== undefined ? value.ios : new Color('#FFFFFF').ios;
   }
 
   [backgroundInternalProperty.setNative](value) {
-    this.nativeView.backgroundColor = new Color(value.color !== undefined ? value.color + '' : '#FFFFFF').ios;
+    this.nativeView.backgroundColor = new Color(
+      value.color !== undefined ? value.color + '' : '#FFFFFF'
+    ).ios;
   }
 
   [shadowRadiusProperty.setNative](value: number) {
@@ -45,11 +59,17 @@ export class CardView extends CardViewCommon {
   }
 
   [shadowOffsetWidthProperty.setNative](value: number) {
-    this.nativeView.layer.shadowOffset = CGSizeMake(value, this.nativeView.layer.shadowOffset.height);
+    this.nativeView.layer.shadowOffset = CGSizeMake(
+      value,
+      this.nativeView.layer.shadowOffset.height
+    );
   }
 
   [shadowOffsetHeightProperty.setNative](value: number) {
-    this.nativeView.layer.shadowOffset = CGSizeMake(this.nativeView.layer.shadowOffset.width, value);
+    this.nativeView.layer.shadowOffset = CGSizeMake(
+      this.nativeView.layer.shadowOffset.width,
+      value
+    );
   }
 
   [shadowColorProperty.setNative](value: Color) {

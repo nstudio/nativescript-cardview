@@ -1,21 +1,35 @@
-import { Application, Color, backgroundColorProperty, backgroundInternalProperty } from '@nativescript/core';
+import {
+  Application,
+  backgroundColorProperty,
+  backgroundInternalProperty,
+  Color
+} from '@nativescript/core';
 import {
   CardViewCommon,
   elevationProperty,
   radiusProperty,
   rippleProperty
 } from './cardview-common';
+
 declare let global: any;
-const CardViewNamespace = useAndroidX() ? global.androidx.cardview.widget : (<any>android.support).v7.widget;
-const AppCompatResourcesNamespace = useAndroidX() ? 'androidx.appcompat' : 'android.support.v7.appcompat';
+
+const CardViewNamespace = useAndroidX()
+  ? androidx.cardview.widget
+  : (android.support as any).v7.widget;
+
+const AppCompatResourcesNamespace = useAndroidX()
+  ? 'androidx.appcompat'
+  : 'android.support.v7.appcompat';
 
 function useAndroidX() {
   return global.androidx && global.androidx.cardview;
 }
+
 export class CardView extends CardViewCommon {
   private _androidViewId: number;
-  public nativeView;
+  nativeView;
 
+  // @ts-ignore
   get android(): any {
     return this.nativeView;
   }
@@ -33,10 +47,13 @@ export class CardView extends CardViewCommon {
       this.nativeView.setClickable(false);
     } else {
       const resourcesUri = AppCompatResourcesNamespace + '.R$attr';
+      console.log('resourcesUri', resourcesUri, AppCompatResourcesNamespace);
       const attr = java.lang.Class.forName(resourcesUri);
 
       // https://developer.android.com/reference/java/lang/Class#getField(java.lang.String)
-      const field = attr.getField('selectableItemBackground') as java.lang.reflect.Field;
+      const field = attr.getField(
+        'selectableItemBackground'
+      ) as java.lang.reflect.Field;
 
       if (field && android.os.Build.VERSION.SDK_INT >= 23) {
         const resId = field.getInt(null);
@@ -52,11 +69,11 @@ export class CardView extends CardViewCommon {
     }
   }
 
-  public createNativeView() {
+  createNativeView() {
     return new CardViewNamespace.CardView(this._context);
   }
 
-  public initNativeView() {
+  initNativeView() {
     this._androidViewId = android.view.View.generateViewId();
     this.nativeView.setId(this._androidViewId);
   }
@@ -64,10 +81,15 @@ export class CardView extends CardViewCommon {
   [backgroundColorProperty.setNative](value: Color) {
     if (value) {
       try {
-        this.nativeView.setCardBackgroundColor(value !== undefined ? value.android : new Color('#FFFFFF').android);
+        this.nativeView.setCardBackgroundColor(
+          value !== undefined ? value.android : new Color('#FFFFFF').android
+        );
       } catch (error) {
         // do nothing, catch bad color value
-        console.log('NativeScript-Cardview --- invalid background-color value ', error);
+        console.log(
+          'NativeScript-Cardview --- invalid background-color value ',
+          error
+        );
       }
     }
   }
@@ -76,11 +98,15 @@ export class CardView extends CardViewCommon {
     if (value) {
       try {
         this.nativeView.setCardBackgroundColor(
-          new Color(value.color !== undefined ? value.color + '' : '#FFFFFF').android
+          new Color(value.color !== undefined ? value.color + '' : '#FFFFFF')
+            .android
         );
       } catch (error) {
         // do nothing, catch bad color value
-        console.log('NativeScript-Cardview --- invalid background-color value:', error);
+        console.log(
+          'NativeScript-Cardview --- invalid background-color value:',
+          error
+        );
       }
     }
   }
