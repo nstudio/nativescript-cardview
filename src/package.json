@@ -1,6 +1,6 @@
 {
   "name": "@nstudio/nativescript-cardview",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A NativeScript plugin for Material Design CardView component.",
   "main": "cardview",
   "typings": "index.d.ts",
