@@ -10,6 +10,7 @@ demo/app/**.js
 demo/node_modules/
 node_modules/
 hooks
+package-lock.json
 
 .vscode
 .idea

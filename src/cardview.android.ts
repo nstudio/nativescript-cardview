@@ -1,17 +1,12 @@
-/// <reference path="./node_modules/tns-platform-declarations/android.d.ts" />
-
-import * as application from 'tns-core-modules/application';
-import { Color } from 'tns-core-modules/color';
+import { Application, Color, backgroundColorProperty, backgroundInternalProperty } from '@nativescript/core';
 import {
   CardViewCommon,
-  backgroundColorProperty,
-  backgroundInternalProperty,
   elevationProperty,
   radiusProperty,
   rippleProperty
 } from './cardview-common';
 declare let global: any;
-const CardViewNamespace = useAndroidX() ? global.androidx.cardview.widget : android.support.v7.widget;
+const CardViewNamespace = useAndroidX() ? global.androidx.cardview.widget : (<any>android.support).v7.widget;
 const AppCompatResourcesNamespace = useAndroidX() ? 'androidx.appcompat' : 'android.support.v7.appcompat';
 
 function useAndroidX() {
@@ -48,7 +43,7 @@ export class CardView extends CardViewCommon {
 
         const attrs = Array.create('int', 1);
         attrs[0] = resId;
-        const activity = application.android.foregroundActivity;
+        const activity = Application.android.foregroundActivity;
         const typedValue = activity.obtainStyledAttributes(attrs);
         const selectedItemDrawable = typedValue.getDrawable(0);
         this.nativeView.setForeground(selectedItemDrawable);

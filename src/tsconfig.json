@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    "target": "es2017",
+    "module": "esnext",
+    "moduleResolution": "node",
     "skipLibCheck": true,
     "removeComments": true,
     "experimentalDecorators": true,
@@ -11,11 +12,9 @@
     "noImplicitUseStrict": true,
     "lib": ["es6", "dom"],
     "rootDir": ".",
-    "baseUrl": ".",
-    "paths": {
-      "*": ["./node_modules/tns-core-modules/*", "./node_modules/*"]
-    }
+    "baseUrl": "."
   },
+  "include": ["references.d.ts"],
   "files": ["cardview-common.ts", "cardview.android.ts", "cardview.ios.ts"],
   "exclude": ["node_modules"],
   "compileOnSave": false

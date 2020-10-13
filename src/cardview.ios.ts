@@ -1,15 +1,15 @@
-/// <reference path="./node_modules/tns-platform-declarations/ios.d.ts" />
 
-import { Color } from 'tns-core-modules/color';
-import { screen } from 'tns-core-modules/platform';
-import { CardViewCommon, backgroundColorProperty, backgroundInternalProperty, radiusProperty, shadowColorProperty, shadowOffsetHeightProperty, shadowOffsetWidthProperty, shadowOpacityProperty, shadowRadiusProperty } from './cardview-common';
+
+import { Color, Screen, backgroundColorProperty, backgroundInternalProperty } from '@nativescript/core';
+
+import { CardViewCommon, radiusProperty, shadowColorProperty, shadowOffsetHeightProperty, shadowOffsetWidthProperty, shadowOpacityProperty, shadowRadiusProperty } from './cardview-common';
 
 export class CardView extends CardViewCommon {
   public nativeView: UIView;
 
   constructor() {
     super();
-    const width = screen.mainScreen.widthDIPs - 20;
+    const width = Screen.mainScreen.widthDIPs - 20;
     this.nativeView = new UIView({ frame: CGRectMake(10, 30, width, 0) });
     this.nativeView.layer.masksToBounds = false;
     this.shadowColor = 'black';
