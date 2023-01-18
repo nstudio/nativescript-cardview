@@ -1,3 +1,5 @@
+## Source management moved to [nstudio/nativescript-plugins](https://github.com/nstudio/nativescript-plugins/tree/main/packages/nativescript-cardview)
+<hr/>
 <a align="center" href="https://www.npmjs.com/package/@nstudio/nativescript-cardview">
     <h3 align="center">NativeScript CardView</h3>
 </a>
